@@ -7,10 +7,7 @@
 
 body {
     color: #ededed;
-    background: url(./images/mjy15.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: #000;
 }
 
 .header {
@@ -54,31 +51,21 @@ body {
     color: #96D1D1;
 }
 
-.home{
+.home {
     position: relative;
     width: 100%;
     justify-content: space-between;
     height: 100vh;
+    background: url(./images/mjy15.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Garde l'image fixe en arrière-plan */
+    background-position: center;
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
-}
-
-.home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
     z-index: 1;
 }
 
-.home > * {
-    position: relative;
-    z-index: 2;
-}
 
 .home-content {
     max-width: 600px;
@@ -150,23 +137,9 @@ body {
     align-items: center;
     gap: 1rem;
     position: relative;
+    z-index: 0;
 }
 
-.about::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-    z-index: 1;
-}
-
-.about> * {
-    position: relative;
-    z-index: 2;
-}
 
 .about-img {
     position: relative;
@@ -226,6 +199,132 @@ body {
     color: #081b29;
     box-shadow: 0 0 20px #96D1D1;
 }
+
+.skills {
+    z-index: 0;
+}
+
+
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+
+.sub-title span {
+    color: #96D1D1;
+}
+
+.skills-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.skills-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+                1px 1px 40px #0053b8f7;
+}
+
+.skills-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.skills-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.skills-list div a {
+    text-decoration: none;
+    color: #081b29;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #96D1D1;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #212908;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.read:hover{
+    background: #96D1D1;
+    color: #081b29;
+    box-shadow: 0 0 20px #96D1D1;
+}
+
+.skills-list div:hover{
+    transform: translateY(-10px);
+}
+
+
+#skills{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.container {
+    padding: 90px;
+}
+
+
+
+
+
+
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    perspective: 1000px; /* Remove if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
 
 @keyframes slideRight {
     0% {
