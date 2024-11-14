@@ -8,6 +8,8 @@
 body {
     color: #ededed;
     background: #000;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .header {
@@ -289,10 +291,61 @@ body {
 
 .back-card{
     display: none;
+    height: auto; /* Set a fixed height */
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.back-card-arrow {
+    position: sticky; /* Make the arrow section sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure it stays above the logos */
+    background-color: inherit; /* Maintain background color */
+    padding: 10px 0; /* Optional: Add some padding */
+}
+/* Custom scrollbar styles */
+.back-card::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.back-card::-webkit-scrollbar-track {
+    background: none; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.back-card::-webkit-scrollbar-thumb {
+    background: #96d1d1; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid #2c2c2c; /* Padding around the thumb */
+}
+
+.back-card::-webkit-scrollbar-thumb:hover {
+    background: #81bcbc; /* Color of the scrollbar thumb on hover */
 }
 
 
+.back-card-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;   
+    font-size: 25px;
+    margin-left: 50px; 
+}
 
+.back-card-logos i {
+    display: inline-block;
+    vertical-align: middle;}
+
+.back-card-logos p {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff; /* Set text color to white */
+    font-family: 'popins', sans-serif; /* Ensure the font family is applied */
+    font-size: 25px; /* Adjust the size as needed */
+    margin: 0; /* Remove default margin */
+}
 
 
 

@@ -13,7 +13,7 @@
         <a href="#" class="logo">Portfolio</a>
         <nav class="navbar">
             <a href="#" style="--i:1" class="active">Accueil</a>
-            <a href="#about" style="--i:2">A propos</a>
+            <a href="#about-start" style="--i:2">A propos</a>
             <a href="#skill" style="--i:3">Compétences</a>
             <a href="#projects" style="--i:4">Projets</a>
             <a href="#contacts" style="--i:5">Contact</a>
@@ -31,6 +31,7 @@
             </div>
         </div>
     </section>
+    <div id="about-start"></div>
     <section class="about" id="about">
         <div class="about-img">
             <img src="./images/20241105_130556.jpg" alt="photo">
@@ -47,15 +48,24 @@
             <div class="container">
                 <h1 class="sub-title">Mes <span>compétences</span> </h1>
                 <div class="skills-list">
-                    <div id="2"  onclick="DisplayBack()">
+                    <div id="2">
                         <i class='bx bx-code-alt' style='color:#96d1d1'></i>
                         <h2>Dévelopemment web</h2>
                         <p>Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
                             également apte à travailler sur des projets front-end ainsi qu'à découvrir de nouveaux domaines tels que le développement mobile.</p>
-                            <a href="#" class="read">Voir plus</a>
+                            <a href="#" class="read" onclick="DisplayBack()">Voir plus</a>
                     </div>
-                    <div class="back-card" id="1" onclick="Refresh()">
-                        <p>back card</p>
+                    <div class="back-card" id="1">
+                        <section class="back-card-arrow">
+                             <i class='bx bx-arrow-back' style='color:#96d1d1' onclick="Refresh()" id="arrow" ></i>
+                        </section>
+                        <section class="back-card-logos">
+                            <i class='bx bxl-javascript' id="techno" style='color:#e9d44d'><p>JavaScript</p></i>  
+                            <i class='bx bxl-html5' id="techno" style='color:#dd4b24'  ><p>HTML</p></i>
+                            <i class='bx bxl-css3' id="techno" style='color:#147bbc'  ><p>CSS</p></i>
+                            <i class='bx bxl-go-lang' id="techno" style='color:#00a9d2'  ><p>Golang</p></i>
+                            <i class='bx bxl-java' id="techno" style='color:#0a74c2'  ><p>JAVA</p></i>
+                        </section>
                     </div>
                     <div>
                         <i class='bx bxs-data' style='color:#96d1d1' ></i>
