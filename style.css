@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: 'popins', sans-serif;
 }
 
@@ -384,20 +385,10 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), #96D1D1);
+    background: linear-gradient(rgba(0, 0, 0, 1), #96D1D1);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -433,7 +424,7 @@ body {
 
 .row:hover .layer {
     height: 100%; /* Expand to full height */
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(150, 209, 209, 0.9)); /* Darker background on hover */
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(150, 209, 209, 0.9)); /* Darker background on hover */
 }
 
 .row:hover .layer h5, .row:hover .layer p {
@@ -509,7 +500,135 @@ body {
     font-weight: 600;
 }
 
+.contact-text p{
+    color: rgb(177, 177, 177);
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
 
+.contact-list{
+    margin-bottom: 3rem;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-list i{
+    display: inline-block;
+    color: #96d1d1;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+}
+
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: #96d1d1;
+}
+
+.contact-icons i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #96D1D1;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #96D1D1;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.contact-icons i:hover{
+    background: #96D1D1;
+    color: #000;
+    box-shadow: 0 0 20px #96D1D1;
+}
+
+.contact-form form{
+    position: relative;
+}
+
+.contact-form form input, form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: #55555557;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea{
+    height: 220px;
+    resize: none;
+}
+
+.contact-form form .send{
+    display: inline-block;
+    padding: 14px 60px;
+    background: #96D1D1;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #212908;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards; 
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #96D1D1
+    0 0 25px #96D1D1;  
+}
+
+.contact-form form .send:hover{
+    background: #96D1D1;
+    color: #081b29;
+    box-shadow: 0 0 20px #96D1D1;
+}
+
+.last-text {
+    margin: 0; /* Reset margins */
+    background: #081b29; /* Optional: Set background color */
+    color: #fff; /* Optional: Set text color */
+    text-align: center; /* Center the text */
+    position: relative; /* Ensure it stays within the flow of the document */
+}
+
+.last-text p{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #081b29;
+    font-weight: 300;
+    margin-top: 70px;
+}
+
+.top{
+    position: fixed;
+    bottom: 5rem;
+    right: 2.1rem;
+}
+
+.top i{
+    color: #000;
+    background: #96D1D1;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
 
 
 
