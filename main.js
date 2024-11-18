@@ -6,16 +6,19 @@ function DownloadPDF() {
 }
 
 
-function DisplayBack(){
+function DisplayBack(cardid){
     event.preventDefault();
-    document.getElementById('1').style.display = 'flex';
-    document.getElementById('2').style.display = 'none';
+    console.log("card-"+cardid);
+    document.getElementById("card-"+cardid).style.display = 'none';
+    document.getElementById("back-card-"+cardid).style.display = 'flex';
+
+    
 }
 
-function Refresh(){
+function Refresh(cardid){
     event.preventDefault();
-    document.getElementById('2').style.display = '';
-    document.getElementById('1').style.display = 'none';
+    document.getElementById("back-card-"+cardid).style.display = 'none';
+    document.getElementById("card-"+cardid).style.display = '';
 }
 
 function adjustBackCardHeight() {

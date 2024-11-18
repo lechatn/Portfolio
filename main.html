@@ -46,19 +46,20 @@
     </section>
     <section class="skill" id="skill">
         <div class="skills" id="skills">
-            <div class="container">
+            <div class="container-hard-skills">
                 <h1 class="sub-title">Mes <span>compétences</span> </h1>
+                <h2 class="sub-title" id="hard-skills"><span>Hard</span>  Skills</h2>
                 <div class="skills-list">
-                    <div id="2">
+                    <div id="card-1">
                         <i class='bx bx-code-alt' style='color:#96d1d1'></i>
                         <h2>Dévelopemment web</h2>
                         <p>Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
                             également apte à travailler sur des projets front-end ainsi qu'à découvrir de nouveaux domaines tels que le développement mobile.</p>
-                            <a href="#" class="read" onclick="DisplayBack()">Voir plus</a>
+                            <a href="#" class="read" onclick="DisplayBack('1')">Voir plus</a>
                     </div>
-                    <div class="back-card" id="1">
+                    <div class="back-card" id="back-card-1">
                         <section class="back-card-arrow">
-                             <i class='bx bx-arrow-back' style='color:#96d1d1' onclick="Refresh()" id="arrow" ></i>
+                             <i class='bx bx-arrow-back' style='color:#96d1d1' onclick="Refresh('1')" id="arrow" ></i>
                         </section>
                         <section class="back-card-logos">
                             <i class='bx bxl-javascript' id="techno" style='color:#e9d44d'><p>JavaScript</p></i>  
@@ -66,21 +67,53 @@
                             <i class='bx bxl-css3' id="techno" style='color:#147bbc'  ><p>CSS</p></i>
                             <i class='bx bxl-go-lang' id="techno" style='color:#00a9d2'  ><p>Golang</p></i>
                             <i class='bx bxl-java' id="techno" style='color:#0a74c2'  ><p>JAVA</p></i>
+                            <i class='bx bxl-typescript' id="techno" style='color:#2f74c0'  ><p>TypeScript</p></i>
                         </section>
                     </div>
-                    <div>
+                    <div id="card-2">
                         <i class='bx bxs-data' style='color:#96d1d1' ></i>
                         <h2>Base de données</h2>
                         <p>Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
                             également apte à travailler sur des projets front-end ainsi qu'à découvrir de nouveaux domaines tels que le développement mobile.</p>
-                            <a href="#" class="read">Voir plus</a>
+                            <a href="#" class="read" onclick="DisplayBack('2')">Voir plus</a>
                     </div>
-                    <div>
+                    <div class="back-card" id="back-card-2">
+                        <section class="back-card-arrow">
+                             <i class='bx bx-arrow-back' style='color:#96d1d1' onclick="Refresh('2')" id="arrow" ></i>
+                        </section>
+                        <section class="back-card-logos">
+                            <i class='bx bxs-data' style='color:gray'  ><p>SQL</p></i>
+                            <i class='bx bxl-python' style='color:aliceblue'  ><p>Python</p></i>
+                            <i class='bx bxl-mongodb' style='color:#4da53f' ><p>MongoDB</p></i>
+                        </section>
+                    </div>
+                    <div id="card-3">
                         <i class='bx bx-git-branch' style='color:#96d1d1' ></i>
                         <h2>Gestion de projets</h2>
                         <p>Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
                             également apte à travailler sur des projets front-end ainsi qu'à découvrir de nouveaux domaines tels que le développement mobile.</p>
-                            <a href="#" class="read">Voir plus</a>
+                            <a href="#" class="read" onclick="DisplayBack('3')">Voir plus</a>
+                    </div>
+                    <div class="back-card" id="back-card-3">
+                        <section class="back-card-arrow">
+                             <i class='bx bx-arrow-back' style='color:#96d1d1' onclick="Refresh('3')" id="arrow" ></i>
+                        </section>
+                        <section class="back-card-logos">
+                            <i class='bx bxl-github' style='color:#1f2328'  ><p>Github</p></i>
+                            <i class='bx bxl-trello' style='color:#1f2328' ><p>Trello</p></i>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="container-soft-skills">
+                <h2 class="sub-title" id="soft-skills"><span>Soft</span> Skills</h2>
+                <div class="soft-skills-wrapper">
+                    <div class="soft-skills-marquee">
+                      <div class="soft-skill">Communication</div>
+                      <div class="soft-skill">Travail en équipe</div>
+                      <div class="soft-skill">Résolution de problèmes</div>
+                      <div class="soft-skill">Adaptabilité</div>
+                      <div class="soft-skill">Leadership</div>
                     </div>
                 </div>
             </div>

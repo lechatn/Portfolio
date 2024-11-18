@@ -14,6 +14,29 @@ body {
     min-height: 100vh;
 }
 
+/* Style de la scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Largeur de la scrollbar */
+}
+
+/* Style de la piste de la scrollbar */
+::-webkit-scrollbar-track {
+    background: #081b29; /* Couleur de fond de la piste */
+    border-radius: 10px; /* Bordure arrondie */
+}
+
+/* Style du pouce de la scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #ededed; /* Couleur du pouce */
+    border-radius: 10px; /* Bordure arrondie */
+    border: 3px solid #081b29; /* Bordure autour du pouce */
+}
+
+/* Style du pouce de la scrollbar lors du survol */
+::-webkit-scrollbar-thumb:hover {
+    background: #fff; /* Couleur du pouce lors du survol */
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -241,12 +264,12 @@ body {
 
 .skills-list div i {
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .skills-list div h2 {
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 27px;
+    font-weight: 400;
     margin-bottom: 15px;
 }
 
@@ -256,6 +279,7 @@ body {
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
+    align-self: flex-end;
 }
 
 .read{
@@ -287,10 +311,19 @@ body {
     line-height: 1.4;
     margin-bottom: 4rem;
 }
-.container {
+.container-soft-skills {
     padding: 90px;
 }
 
+
+@keyframes scroll-horizontal {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
 
 .back-card{
     display: none;
@@ -306,6 +339,7 @@ body {
     background-color: inherit; /* Maintain background color */
     padding: 10px 0; /* Optional: Add some padding */
 }
+
 /* Custom scrollbar styles */
 .back-card::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
@@ -334,20 +368,37 @@ body {
     flex-direction: column;
     gap: 10px;   
     font-size: 25px;
-    margin-left: 50px; 
+    margin-left: 10px; 
+    margin-top: 11px;
 }
 
 .back-card-logos i {
     display: inline-block;
-    vertical-align: middle;}
+    vertical-align: middle;
+    margin-right: 16px;
+}
 
-.back-card-logos p {
+
+#hard-skills{
+    margin-top: 2rem;
+}
+
+.python-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('../Portfolio/images/python-logo.png') no-repeat center center;
+    background-size: contain;
+}
+
+.back-card-logos p{
     display: inline-block;
     vertical-align: middle;
     color: #fff; /* Set text color to white */
     font-family: 'popins', sans-serif; /* Ensure the font family is applied */
-    font-size: 25px; /* Adjust the size as needed */
+    font-size: 20px; /* Adjust the size as needed */
     margin: 0; /* Remove default margin */
+    margin-left: 15px;
 }
 
 .main-text{
