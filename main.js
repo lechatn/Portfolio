@@ -30,6 +30,25 @@ function adjustBackCardHeight() {
     }
 }
 
+function adjustBackCardHeight() {
+    var skillsListDivs = document.querySelectorAll('.skills-list div:not(.back-card)');
+    var backCards = document.querySelectorAll('.back-card');
+    
+    if (skillsListDivs.length && backCards.length) {
+        skillsListDivs.forEach(function(skillsListDiv, index) {
+            if (backCards[index]) {
+                backCards[index].style.height = skillsListDiv.offsetHeight + 'px';
+            }
+        });
+    }
+}
+
+// Appeler la fonction pour ajuster la hauteur des back-cards
+adjustBackCardHeight();
+
+// Ajuster la hauteur des back-cards lors du redimensionnement de la fenêtre
+window.addEventListener('resize', adjustBackCardHeight);
+
 document.addEventListener('DOMContentLoaded', adjustBackCardHeight);
 window.addEventListener('resize', adjustBackCardHeight);
 

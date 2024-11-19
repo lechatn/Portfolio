@@ -371,7 +371,7 @@ body {
 .back-card-logos {
     display: flex;
     flex-direction: column;
-    gap: 38px;   
+    gap: 26px;   
     font-size: 25px;
     margin-left: 10px; 
     margin-top: 11px;
