@@ -82,3 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+document.getElementById('nav-skill').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('skills').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});

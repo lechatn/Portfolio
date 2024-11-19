@@ -14,7 +14,7 @@
         <nav class="navbar">
             <a href="#home" id="nav-home" style="--i:1" class="active">Accueil</a>
             <a href="#about" id="nav-about" style="--i:2">A propos</a>
-            <a href="#skill-start" id="nav-skill" style="--i:3">Compétences</a>
+            <a href="#skills" id="nav-skill" style="--i:3">Compétences</a>
             <a href="#portfolio" id="nav-portfolio" style="--i:4">Projets</a>
             <a href="#contact" id="nav-contact" style="--i:5">Contact</a>
         </nav>
@@ -44,7 +44,6 @@
             <a href="#about" class="btn-box" onclick="DownloadPDF()">Télécharger CV</a>
         </div>
     </section>
-    <div id="skill-start"></div>
     <section class="skills" id="skills">
         <div class="container-hard-skills">
             <h1 class="sub-title">Mes <span>compétences</span> </h1>
@@ -53,7 +52,7 @@
                 <div id="card-1">
                     <i class='bx bx-code-alt' style='color:#96d1d1'></i>
                     <h2>Dévelopemment web</h2>
-                    <p>Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
+                    <p id="description">Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
                         également apte à travailler sur des projets front-end ainsi qu'à découvrir de nouveaux domaines tels que le développement mobile.</p>
                         <a href="#" class="read" onclick="DisplayBack('1')">Voir plus</a>
                 </div>
@@ -73,8 +72,9 @@
                 <div id="card-2">
                     <i class='bx bxs-data' style='color:#96d1d1' ></i>
                     <h2>Base de données</h2>
-                    <p>Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
-                        également apte à travailler sur des projets front-end ainsi qu'à découvrir de nouveaux domaines tels que le développement mobile.</p>
+                    <p>J'ai découvert il y a peu de temps l'univers des bases de données et j'ai acquis de nombreuses compétences dans des domaines tels que la conception, 
+                        l'administration et l'utilisation de bases de données. Cependant, je souhaite continuer à approfondir mes connaissances, explorer de nouvelles technologies et me perfectionner dans l'optimisation des performances et la sécurité des données.
+                    </p>
                         <a href="#" class="read" onclick="DisplayBack('2')">Voir plus</a>
                 </div>
                 <div class="back-card" id="back-card-2">
@@ -90,8 +90,8 @@
                 <div id="card-3">
                     <i class='bx bx-git-branch' style='color:#96d1d1' ></i>
                     <h2>Gestion de projets</h2>
-                    <p>Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
-                        également apte à travailler sur des projets front-end ainsi qu'à découvrir de nouveaux domaines tels que le développement mobile.</p>
+                    <p>J'ai développé des compétences en gestion de projets en travaillant sur divers projets, où j'ai appris à organiser, planifier et coordonner les tâches efficacement. Je m'efforce de respecter les délais tout en assurant la communication
+                         et la collaboration au sein de l'équipe, et je suis toujours désireux d'améliorer mes méthodes pour mener à bien chaque projet</p>
                         <a href="#" class="read" onclick="DisplayBack('3')">Voir plus</a>
                 </div>
                 <div class="back-card" id="back-card-3">
@@ -106,13 +106,13 @@
             </div>
         </div>
         <div class="container-soft-skills">
-            <h2 class="sub-title" id="soft-skills"><span>Soft</span>  Skills</h2>
+            <h2 class="sub-title" id="soft-skills"><span>Soft</span> Skills</h2>
             <div class="skills-list">
                 <div id="card-4">
                     <i class='bx bx-brain' style='color:#96d1d1' ></i>
                     <h2>Collaboration</h2>
-                    <p>Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
-                        également apte à travailler sur des projets front-end ainsi qu'à découvrir de nouveaux domaines tels que le développement mobile.</p>
+                    <p>Je suis habitué à travailler en équipe, où je valorise la communication et l’échange d’idées. J’adapte mes actions aux besoins du groupe et je m’assure de contribuer
+                         à l’atteinte des objectifs communs en respectant les délais et en soutenant mes collègues dans leurs tâches</p>
                         <a href="#" class="read" onclick="DisplayBack('4')">Voir plus</a>
                 </div>
                 <div class="back-card" id="back-card-4">
@@ -120,16 +120,16 @@
                             <i class='bx bx-arrow-back' style='color:#96d1d1' onclick="Refresh('4')" id="arrow" ></i>
                     </section>
                     <section class="back-card-logos">
-                        <i class='bx bx-brain' style='color:#96d1d1'  ><p>Créativité</p></i>
+                        <i class='bx bx-chat' style='color:#96d1d1' ><p>Communication</p></i>
                         <i class='bx bx-group' style='color:#96d1d1'  ><p>Travail en équipe</p></i>
                         <i class='bx bx-time five' style='color:#96d1d1'  ><p>Gestion du temps</p></i>
                     </section>
                 </div>
                 <div id="card-5">
-                    <i class='bx bx-brain' style='color:#96d1d1' ></i>
-                    <h2>Créativité</h2>
-                    <p>Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
-                        également apte à travailler sur des projets front-end ainsi qu'à découvrir de nouveaux domaines tels que le développement mobile.</p>
+                    <i class='bx bxs-battery-full' style='color:#96d1d1' ></i>
+                    <h2>Autonomie</h2>
+                    <p>Je suis capable de travailler de manière indépendante, en gérant efficacement mon temps et mes priorités. J'aime résoudre
+                         des problèmes par moi-même et prendre des initiatives pour atteindre mes objectifs, tout en restant responsable de mes actions et résultats</p>
                         <a href="#" class="read" onclick="DisplayBack('5')">Voir plus</a>
                 </div>
                 <div class="back-card" id="back-card-5">
@@ -137,72 +137,56 @@
                             <i class='bx bx-arrow-back' style='color:#96d1d1' onclick="Refresh('5')" id="arrow" ></i>
                     </section>
                     <section class="back-card-logos">
-                        <i class='bx bx-brain' style='color:#96d1d1'  ><p>Créativité</p></i>
-                        <i class='bx bx-group' style='color:#96d1d1'  ><p>Travail en équipe</p></i>
-                        <i class='bx bx-time five' style='color:#96d1d1'  ><p>Gestion du temps</p></i>
-                    </section>
-                </div>
-                <div id="card-6">
-                    <i class='bx bx-brain' style='color:#96d1d1' ></i>
-                    <h2>Créativité</h2>
-                    <p>Je suis passionné par le développement web depuis maintenant 4 ans. Je possède une bonne expérience, avec de fortes compétences au niveau back-end. Je reste 
-                        également apte à travailler sur des projets front-end ainsi qu'à découvrir de nouveaux domaines tels que le développement mobile.</p>
-                        <a href="#" class="read" onclick="DisplayBack('6')">Voir plus</a>
-                </div>
-                <div class="back-card" id="back-card-6">
-                    <section class="back-card-arrow">
-                            <i class='bx bx-arrow-back' style='color:#96d1d1' onclick="Refresh('6')" id="arrow" ></i>
-                    </section>
-                    <section class="back-card-logos">
-                        <i class='bx bx-brain' style='color:#96d1d1'  ><p>Créativité</p></i>
-                        <i class='bx bx-group' style='color:#96d1d1'  ><p>Travail en équipe</p></i>
-                        <i class='bx bx-time five' style='color:#96d1d1'  ><p>Gestion du temps</p></i>
+                        <i class='bx bx-brain' style='color:#96d1d1'  ><p>Adaptation</p></i>
+                        <i class='bx bx-group' style='color:#96d1d1'  ><p>Résolution de problèmes</p></i>
+                        <i class='bx bx-time five' style='color:#96d1d1'  ><p>Autodidacte</p></i>
                     </section>
                 </div>
         </div>
     </section>           
     <section>
-        <div id="portfolio" id="project">
-            <div class="main-text" id="project">
-                <h2>Mes <span>projets</span></h2>
-                <div class="portfolio-content">
-                    <div class="row">
-                        <img src="./images/tiki-taka-toe.jpg" alt="tiki-taka-toe">
-                        <div class="layer">
-                            <h5>Tiki-Taka-Toe</h5>
-                            <p>description du projet : Pro verververver gerbrtbev dsgersg fqdeger jhdsdvcnqs f acdsgndsv beregsqdhsqnfsv,dnbvegzcsdgfz</p>
-                            <a href="#"><i class="bx bx-plus-circle"></i></a>
-                        </div>
+    <div id="portfolio" id="project">
+        <div class="main-text" id="project">
+            <h2>Mes <span>projets</span></h2>
+            <div class="portfolio-content">
+                <div class="row">
+                    <img src="./images/tiki-taka-toe.jpg" alt="tiki-taka-toe">
+                    <div class="layer">
+                        <h5>Tiki-Taka-Toe</h5>
+                        <p>description du projet : Pro verververver gerbrtbev dsgersg fqdeger jhdsdvcnqs f acdsgndsv beregsqdhsqnfsv,dnbvegzcsdgfz</p>
+                        <a href="#"><i class="bx bx-plus-circle"></i></a>
                     </div>
-                    <div class="row">
-                        <img src="./images/tiki-taka-toe.jpg" alt="tiki-taka-toe">
-                        <div class="layer">
-                            <h5>Tiki-Taka-Toe</h5>
-                            <p>description du projet : Pro verververver gerbrtbev dsgersg fqdeger jhdsdvcnqs f acdsgndsv beregsqdhsqnfsv,dnbvegzcsdgfz</p>
-                            <a href="#"><i class="bx bx-link-external"></i></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <img src="./images/tiki-taka-toe.jpg" alt="tiki-taka-toe">
-                        <div class="layer">
-                            <h5>Tiki-Taka-Toe</h5>
-                            <p>description du projet : Pro verververver gerbrtbev dsgersg fqdeger jhdsdvcnqs f acdsgndsv beregsqdhsqnfsv,dnbvegzcsdgfz</p>
-                            <a href="#"><i class="bx bx-link-external"></i></a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <img src="./images/tiki-taka-toe.jpg" alt="tiki-taka-toe">
-                        <div class="layer">
-                            <h5>Tiki-Taka-Toe</h5>
-                            <p>description du projet : Pro verververver gerbrtbev dsgersg fqdeger jhdsdvcnqs f acdsgndsv beregsqdhsqnfsv,dnbvegzcsdgfz</p>
-                            <a href="#"><i class="bx bx-link-external"></i></a>
-                        </div>
-                    </div>  
                 </div>
+                <div class="row">
+                    <img src="./images/tiki-taka-toe.jpg" alt="tiki-taka-toe">
+                    <div class="layer">
+                        <h5>Tiki-Taka-Toe</h5>
+                        <p>description du projet : Pro verververver gerbrtbev dsgersg fqdeger jhdsdvcnqs f acdsgndsv beregsqdhsqnfsv,dnbvegzcsdgfz</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="./images/tiki-taka-toe.jpg" alt="tiki-taka-toe">
+                    <div class="layer">
+                        <h5>Tiki-Taka-Toe</h5>
+                        <p>description du projet : Pro verververver gerbrtbev dsgersg fqdeger jhdsdvcnqs f acdsgndsv beregsqdhsqnfsv,dnbvegzcsdgfz</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="./images/tiki-taka-toe.jpg" alt="tiki-taka-toe">
+                    <div class="layer">
+                        <h5>Tiki-Taka-Toe</h5>
+                        <p>description du projet : Pro verververver gerbrtbev dsgersg fqdeger jhdsdvcnqs f acdsgndsv beregsqdhsqnfsv,dnbvegzcsdgfz</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>  
             </div>
         </div>
+    </div>
     </section>
-    <section class="contact" id="contact">
+    <div id="contact"></div>
+    <section class="contact">
         <div class="contact-text">
             <h2>Contactez-<span>moi</span></h2>
             <h5>Si vous avez la moindre question, n'hésitez pas à me contacter via mes réseaux sociaux ou en complètant ce formulaire!</h5>

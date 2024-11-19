@@ -251,8 +251,9 @@ body {
 }
 
 .skills-list div{
+    position: relative;
     background-color: transparent;
-    padding: 40px;
+    padding: 30px;
     font-size: 13px;
     font-weight: 13px;
     border-right: 10px;
@@ -264,7 +265,10 @@ body {
 
 .skills-list div i {
     font-size: 50px;
-    margin-bottom: 0px;
+}
+
+.skills-list div:not(.back-card) p {
+    margin-bottom: 50px;
 }
 
 .skills-list div h2 {
@@ -274,13 +278,15 @@ body {
 }
 
 .skills-list div a {
+    position: absolute;
+    bottom: 20px; /* Ajustez cette valeur selon vos besoins */
     text-decoration: none;
     color: #081b29;
     font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-    align-self: flex-end;
+    margin-top: 40px;
 }
+
+
 
 .read{
     display: inline-block;
@@ -322,9 +328,10 @@ body {
     }
 }
 
+
+
 .back-card{
     display: none;
-    height: auto; /* Set a fixed height */
     overflow-y: auto; /* Add vertical scrollbar if content overflows */
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
@@ -363,7 +370,7 @@ body {
 .back-card-logos {
     display: flex;
     flex-direction: column;
-    gap: 10px;   
+    gap: 24px;   
     font-size: 25px;
     margin-left: 10px; 
     margin-top: 11px;
@@ -393,7 +400,7 @@ body {
     vertical-align: middle;
     color: #fff; /* Set text color to white */
     font-family: 'popins', sans-serif; /* Ensure the font family is applied */
-    font-size: 20px; /* Adjust the size as needed */
+    font-size: 25px; /* Adjust the size as needed */
     margin: 0; /* Remove default margin */
     margin-left: 15px;
 }
