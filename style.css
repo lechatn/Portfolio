@@ -311,9 +311,6 @@ body {
     line-height: 1.4;
     margin-bottom: 4rem;
 }
-.container-soft-skills {
-    padding: 90px;
-}
 
 
 @keyframes scroll-horizontal {
@@ -400,6 +397,14 @@ body {
     margin: 0; /* Remove default margin */
     margin-left: 15px;
 }
+
+.container-soft-skills{
+    margin-top: 5rem;
+}
+
+
+
+
 
 .main-text{
     padding-top: 130px;
@@ -514,16 +519,6 @@ body {
 .row:hover img {
     transform: scale(1.1);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
