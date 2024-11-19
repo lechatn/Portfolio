@@ -269,6 +269,7 @@ body {
 
 .skills-list div:not(.back-card) p {
     margin-bottom: 50px;
+    font-size: 15px;
 }
 
 .skills-list div h2 {
@@ -370,7 +371,7 @@ body {
 .back-card-logos {
     display: flex;
     flex-direction: column;
-    gap: 24px;   
+    gap: 38px;   
     font-size: 25px;
     margin-left: 10px; 
     margin-top: 11px;
