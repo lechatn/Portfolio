@@ -22,15 +22,6 @@ function Refresh(cardid){
 }
 
 function adjustBackCardHeight() {
-    var skillsListDiv = document.querySelector('.skills-list div');
-    var backCard = document.querySelector('.back-card');
-    
-    if (skillsListDiv && backCard) {
-        backCard.style.height = skillsListDiv.offsetHeight + 'px';
-    }
-}
-
-function adjustBackCardHeight() {
     var skillsListDivs = document.querySelectorAll('.skills-list div:not(.back-card)');
     var backCards = document.querySelectorAll('.back-card');
     
@@ -38,6 +29,17 @@ function adjustBackCardHeight() {
         skillsListDivs.forEach(function(skillsListDiv, index) {
             if (backCards[index]) {
                 backCards[index].style.height = skillsListDiv.offsetHeight + 'px';
+            }
+        });
+    }
+
+    var softSkillsListDivs = document.querySelectorAll('.container-soft-skills .skills-list div:not(.back-card)');
+    var softBackCards = document.querySelectorAll('.container-soft-skills .back-card');
+    
+    if (softSkillsListDivs.length && softBackCards.length) {
+        softSkillsListDivs.forEach(function(softSkillsListDiv, index) {
+            if (softBackCards[index]) {
+                softBackCards[index].style.height = softSkillsListDiv.offsetHeight + 'px';
             }
         });
     }
@@ -99,9 +101,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
         }, 3000);
     }
-});
-
-document.getElementById('nav-skill').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.getElementById('skills').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
