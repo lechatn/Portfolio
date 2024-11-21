@@ -102,3 +102,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var navSkill = document.getElementById("nav-skill");
+    var skillsSection = document.getElementById("skills");
+    var navbarHeight = document.querySelector(".header").offsetHeight;
+
+    navSkill.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: skillsSection.offsetTop - navbarHeight,
+            behavior: "smooth"
+        });
+    });
+});
