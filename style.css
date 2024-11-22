@@ -51,6 +51,13 @@ body {
     z-index: 100;
 }
 
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+}
+
 .logo {
     position: relative;
     font-size: 25px;
@@ -831,10 +838,6 @@ footer p {
 
 /* Mobile Devices */
 @media (max-width: 768px) {
-    body {
-        margin: 1rem; /* Minimize margins for small screens */
-    }
-
     .header {
         padding: 10px 5%;
     }
@@ -892,6 +895,10 @@ footer p {
         font-size: 18px;
     }
 
+    .sub-title {
+        font-size: 40px;
+    }
+
     footer p {
         font-size: 14px; /* Smaller footer text */
     }
@@ -934,3 +941,4 @@ footer p {
         height: 30px;
     }
 }
+

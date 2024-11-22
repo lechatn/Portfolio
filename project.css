@@ -223,6 +223,11 @@ body {
     font-weight: 500;
     word-wrap: break-word; /* Permet de couper les mots trop longs */
     white-space: normal; /* Permet de passer à la ligne automatiquement */
+    color: #a6a6a6;
+}
+
+.project-presentation h2 span{
+    color: #81bcbc;
 }
 
 footer {

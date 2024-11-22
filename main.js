@@ -125,17 +125,6 @@ function debounce(func, wait) {
     };
 }
 
-// Désactiver les animations avant de recharger la page
-function disableAnimations() {
-    const style = document.createElement('style');
-    style.innerHTML = `
-        * {
-            transition: none !important;
-            animation: none !important;
-        }
-    `;
-    document.head.appendChild(style);
-}
 
 // Appeler la fonction pour ajuster la hauteur des back-cards
 document.addEventListener('DOMContentLoaded', adjustBackCardHeight);
