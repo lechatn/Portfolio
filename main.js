@@ -151,3 +151,32 @@ window.addEventListener('resize', function() {
         location.reload();
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.getElementById('burger-menu');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    burgerMenu.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+    });
+
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            navbar.classList.remove('active');
+        });
+    });
+
+    // Ajouter des écouteurs d'événements pour les boutons "Voir plus"
+    const viewMoreButtons = document.querySelectorAll('.read');
+    viewMoreButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            adjustBackCardHeight();
+        });
+    });
+
+    // Recalculer les dimensions des back-cards à chaque interaction avec l'écran
+    window.addEventListener('scroll', adjustBackCardHeight);
+    window.addEventListener('touchmove', adjustBackCardHeight);
+    window.addEventListener('touchend', adjustBackCardHeight);
+});
