@@ -21,39 +21,6 @@ function Refresh(cardid){
     document.getElementById("card-"+cardid).style.display = '';
 }
 
-function adjustBackCardHeight() {
-    var skillsListDivs = document.querySelectorAll('.skills-list div:not(.back-card)');
-    var backCards = document.querySelectorAll('.back-card');
-    
-    if (skillsListDivs.length && backCards.length) {
-        skillsListDivs.forEach(function(skillsListDiv, index) {
-            if (backCards[index]) {
-                backCards[index].style.height = skillsListDiv.offsetHeight + 'px';
-            }
-        });
-    }
-
-    var softSkillsListDivs = document.querySelectorAll('.container-soft-skills .skills-list div:not(.back-card)');
-    var softBackCards = document.querySelectorAll('.container-soft-skills .back-card');
-    
-    if (softSkillsListDivs.length && softBackCards.length) {
-        softSkillsListDivs.forEach(function(softSkillsListDiv, index) {
-            if (softBackCards[index]) {
-                softBackCards[index].style.height = softSkillsListDiv.offsetHeight + 'px';
-            }
-        });
-    }
-}
-
-// Appeler la fonction pour ajuster la hauteur des back-cards
-adjustBackCardHeight();
-
-// Ajuster la hauteur des back-cards lors du redimensionnement de la fenêtre
-window.addEventListener('resize', adjustBackCardHeight);
-
-document.addEventListener('DOMContentLoaded', adjustBackCardHeight);
-window.addEventListener('resize', adjustBackCardHeight);
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
@@ -116,4 +83,62 @@ document.addEventListener("DOMContentLoaded", function() {
             behavior: "smooth"
         });
     });
+});
+
+
+
+
+
+
+
+function adjustBackCardHeight() {
+    var skillsListDivs = document.querySelectorAll('.skills-list div:not(.back-card)');
+    var backCards = document.querySelectorAll('.back-card');
+    
+    if (skillsListDivs.length && backCards.length) {
+        skillsListDivs.forEach(function(skillsListDiv, index) {
+            if (backCards[index]) {
+                backCards[index].style.width = skillsListDiv.offsetWidth + 'px';
+                backCards[index].style.height = skillsListDiv.offsetHeight + 'px';
+            }
+        });
+    }
+
+    var softSkillsListDivs = document.querySelectorAll('.container-soft-skills .skills-list div:not(.back-card)');
+    var softBackCards = document.querySelectorAll('.container-soft-skills .back-card');
+    
+    if (softSkillsListDivs.length && softBackCards.length) {
+        softSkillsListDivs.forEach(function(softSkillsListDiv, index) {
+            if (softBackCards[index]) {
+                softBackCards[index].style.width = softSkillsListDiv.offsetWidth + 'px';
+                softBackCards[index].style.height = softSkillsListDiv.offsetHeight + 'px';
+            }
+        });
+    }
+}
+
+// Fonction de debounce pour limiter le nombre d'appels à adjustBackCardHeight
+function debounce(func, wait) {
+    let timeout;
+    return function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(func, wait);
+    };
+}
+
+// Appeler la fonction pour ajuster la hauteur des back-cards
+document.addEventListener('DOMContentLoaded', adjustBackCardHeight);
+
+// Ajuster la hauteur des back-cards lors du redimensionnement de la fenêtre avec debounce
+window.addEventListener('resize', debounce(adjustBackCardHeight, 100));
+
+
+skillsListDivs.forEach(function (skillsListDiv, index) {
+    if (backCards[index]) {
+        console.log("Parent Height:", skillsListDiv.offsetHeight);
+        console.log("Parent Width:", skillsListDiv.offsetWidth);
+
+        backCards[index].style.width = skillsListDiv.offsetWidth + 'px';
+        backCards[index].style.height = skillsListDiv.offsetHeight + 'px';
+    }
 });

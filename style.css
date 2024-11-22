@@ -12,6 +12,7 @@ body {
     margin-right: 13rem;
     margin-left: 13rem;
     min-height: 100vh;
+    height: 100%;
 }
 
 /* Style de la scrollbar */
@@ -252,6 +253,9 @@ body {
 
 .skills-list div{
     position: relative;
+    height: 100%;
+    min-width: 100%; /* Ajustez selon vos besoins */
+    min-height: 100%; /* Ajustez selon vos besoins */
     background-color: transparent;
     padding: 30px;
     font-size: 13px;
@@ -335,6 +339,8 @@ body {
     display: none;
     overflow-y: auto; /* Add vertical scrollbar if content overflows */
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    width: inherit;
+    height: inherit;
 }
 
 .back-card-arrow {
@@ -409,9 +415,6 @@ body {
 .container-soft-skills{
     margin-top: 5rem;
 }
-
-
-
 
 
 .main-text{
@@ -768,5 +771,166 @@ footer p {
     100% {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+
+/* ==================== Responsive Design ==================== */
+
+/* Large Devices (Desktops and Laptops) */
+@media (max-width: 1200px) {
+    body {
+        margin-right: 8rem;
+        margin-left: 8rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr; /* Stack content vertically */
+        gap: 3rem;
+    }
+
+    .contact {
+        grid-template-columns: 1fr; /* Stack contact items */
+        gap: 2rem;
+    }
+}
+
+/* Tablets and Small Laptops */
+@media (max-width: 992px) {
+    body {
+        margin-right: 4rem;
+        margin-left: 4rem;
+    }
+
+    .navbar a {
+        font-size: 20px; /* Reduce navbar font size */
+        margin-left: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 40px; /* Smaller title for tablets */
+    }
+
+    .about {
+        grid-template-columns: 1fr; /* Stack content */
+        text-align: center;
+    }
+
+    .about-img img {
+        max-width: 300px;
+    }
+
+    .contact-text h2 {
+        font-size: 60px;
+    }
+
+    .contact-form form input, form textarea {
+        width: 100%; /* Full width input fields */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        margin: 1rem; /* Minimize margins for small screens */
+    }
+
+    .header {
+        padding: 10px 5%;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .about {
+        gap: 1.5rem; /* Reduce spacing */
+    }
+
+    .about-img img {
+        max-width: 250px;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about-text h4 {
+        font-size: 20px;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr; /* Stack skills cards */
+    }
+
+    .portfolio-content {
+        grid-template-columns: 1fr; /* Single column for portfolio */
+    }
+
+    .contact {
+        grid-template-columns: 1fr; /* Stack content */
+    }
+
+    .contact-text h2 {
+        font-size: 50px;
+    }
+
+    .contact-text h5 {
+        font-size: 18px;
+    }
+
+    footer p {
+        font-size: 14px; /* Smaller footer text */
+    }
+}
+
+/* Very Small Devices (Extra Small Phones) */
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-text h4 {
+        font-size: 16px;
+    }
+
+    .contact-text h2 {
+        font-size: 40px;
+    }
+
+    .contact-text h5 {
+        font-size: 14px;
+    }
+
+    .contact-icons i {
+        font-size: 16px; /* Smaller icons */
+        width: 30px;
+        height: 30px;
     }
 }
