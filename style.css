@@ -348,6 +348,7 @@ body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
     width: inherit;
     height: inherit;
+    min-height: 200px; /* Ajuste cette valeur */
 }
 
 .back-card-arrow {
@@ -901,6 +902,10 @@ footer p {
 
     .skills-list div{
         height: 100%; /* Ajustez selon vos besoins */
+    }
+
+    .back-card{
+        height: auto;
     }
 
     footer p {
