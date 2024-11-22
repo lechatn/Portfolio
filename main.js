@@ -11,7 +11,7 @@ function DisplayBack(cardid){
     console.log("card-"+cardid);
     document.getElementById("card-"+cardid).style.display = 'none';
     document.getElementById("back-card-"+cardid).style.display = 'flex';
-    document.getElementById("back-card-"+cardid).style.minHeight = '200px';
+    document.getElementById("back-card-"+cardid).style.minHeight = '400px';
 
     
 }
@@ -143,15 +143,6 @@ document.addEventListener('DOMContentLoaded', adjustBackCardHeight);
 
 // Ajuster la hauteur des back-cards lors du redimensionnement de la fenêtre avec debounce
 window.addEventListener('resize', debounce(adjustBackCardHeight, 100));
-
-// Recharger la page lorsque la taille de l'écran change sans animation
-let initialWidth = window.innerWidth;
-window.addEventListener('resize', function() {
-    if (Math.abs(window.innerWidth - initialWidth) > 50) { // Vérifie si la largeur a changé de manière significative
-        disableAnimations();
-        location.reload();
-    }
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     const burgerMenu = document.getElementById('burger-menu');
