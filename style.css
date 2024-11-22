@@ -899,6 +899,10 @@ footer p {
         font-size: 40px;
     }
 
+    .skills-list div{
+        min-height: 100%; /* Ajustez selon vos besoins */
+    }
+
     footer p {
         font-size: 14px; /* Smaller footer text */
     }
