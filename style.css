@@ -261,8 +261,8 @@ body {
 .skills-list div{
     position: relative;
     height: 100%;
-    min-width: 100%; /* Ajustez selon vos besoins */
-    min-height: 100%; /* Ajustez selon vos besoins */
+    min-height: 400px; /* Ajuste cette valeur */
+    max-height: 400px; /* Ajuste cette valeur */
     background-color: transparent;
     padding: 30px;
     font-size: 13px;
@@ -352,6 +352,10 @@ body {
     max-height: 400px; /* Ajuste cette valeur */
 }
 
+#back-card-5, #back-card-4, #card-5, #card-4 {
+    min-height: 300px !important;
+    max-height: 300px !important;
+}
 .back-card-arrow {
     position: sticky; /* Make the arrow section sticky */
     top: 0; /* Stick to the top */
