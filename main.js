@@ -125,6 +125,17 @@ function debounce(func, wait) {
     };
 }
 
+// Désactiver les animations avant de recharger la page
+function disableAnimations() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        * {
+            transition: none !important;
+            animation: none !important;
+        }
+    `;
+    document.head.appendChild(style);
+}
 
 // Appeler la fonction pour ajuster la hauteur des back-cards
 document.addEventListener('DOMContentLoaded', adjustBackCardHeight);
@@ -136,4 +147,28 @@ window.addEventListener('resize', debounce(adjustBackCardHeight, 100));
 window.addEventListener('resize', function() {
     disableAnimations();
     location.reload();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.getElementById('burger-menu');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    burgerMenu.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+    });
+
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            navbar.classList.remove('active');
+        });
+    });
+
+    // Ajouter des écouteurs d'événements pour les boutons "Voir plus"
+    const viewMoreButtons = document.querySelectorAll('.read');
+    viewMoreButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            adjustBackCardHeight();
+        });
+    });
 });
