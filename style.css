@@ -905,14 +905,7 @@ footer p {
         font-size: 40px;
     }
 
-    .skills-list div{
-        height: 100%; /* Ajustez selon vos besoins */
-    }
 
-    .back-card{
-        height: auto;
-        min-height: 150px; /* Hauteur minimale */
-    }
 
     footer p {
         font-size: 14px; /* Smaller footer text */
