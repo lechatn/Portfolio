@@ -144,31 +144,10 @@ document.addEventListener('DOMContentLoaded', adjustBackCardHeight);
 window.addEventListener('resize', debounce(adjustBackCardHeight, 100));
 
 // Recharger la page lorsque la taille de l'écran change sans animation
+let initialWidth = window.innerWidth;
 window.addEventListener('resize', function() {
-    disableAnimations();
-    location.reload();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const burgerMenu = document.getElementById('burger-menu');
-    const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.navbar a');
-
-    burgerMenu.addEventListener('click', function() {
-        navbar.classList.toggle('active');
-    });
-
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-            navbar.classList.remove('active');
-        });
-    });
-
-    // Ajouter des écouteurs d'événements pour les boutons "Voir plus"
-    const viewMoreButtons = document.querySelectorAll('.read');
-    viewMoreButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            adjustBackCardHeight();
-        });
-    });
+    if (Math.abs(window.innerWidth - initialWidth) > 50) { // Vérifie si la largeur a changé de manière significative
+        disableAnimations();
+        location.reload();
+    }
 });
