@@ -906,6 +906,7 @@ footer p {
 
     .back-card{
         height: auto;
+        min-height: 150px; /* Hauteur minimale */
     }
 
     footer p {
