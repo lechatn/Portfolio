@@ -11,6 +11,7 @@ function DisplayBack(cardid){
     console.log("card-"+cardid);
     document.getElementById("card-"+cardid).style.display = 'none';
     document.getElementById("back-card-"+cardid).style.display = 'flex';
+    document.getElementById("back-card-"+cardid).style.minHeight = '200px';
 
     
 }
