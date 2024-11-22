@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
 function adjustBackCardHeight() {
     var skillsListDivs = document.querySelectorAll('.skills-list div:not(.back-card)');
     var backCards = document.querySelectorAll('.back-card');
@@ -126,19 +125,26 @@ function debounce(func, wait) {
     };
 }
 
+// Désactiver les animations avant de recharger la page
+function disableAnimations() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        * {
+            transition: none !important;
+            animation: none !important;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
 // Appeler la fonction pour ajuster la hauteur des back-cards
 document.addEventListener('DOMContentLoaded', adjustBackCardHeight);
 
 // Ajuster la hauteur des back-cards lors du redimensionnement de la fenêtre avec debounce
 window.addEventListener('resize', debounce(adjustBackCardHeight, 100));
 
-
-skillsListDivs.forEach(function (skillsListDiv, index) {
-    if (backCards[index]) {
-        console.log("Parent Height:", skillsListDiv.offsetHeight);
-        console.log("Parent Width:", skillsListDiv.offsetWidth);
-
-        backCards[index].style.width = skillsListDiv.offsetWidth + 'px';
-        backCards[index].style.height = skillsListDiv.offsetHeight + 'px';
-    }
+// Recharger la page lorsque la taille de l'écran change sans animation
+window.addEventListener('resize', function() {
+    disableAnimations();
+    location.reload();
 });
