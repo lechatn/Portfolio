@@ -348,7 +348,8 @@ body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
     width: inherit;
     height: inherit;
-    min-height: 200px; /* Ajuste cette valeur */
+    min-height: 400px; /* Ajuste cette valeur */
+    max-height: 400px; /* Ajuste cette valeur */
 }
 
 .back-card-arrow {

@@ -11,7 +11,7 @@ function DisplayBack(cardid){
     console.log("card-"+cardid);
     document.getElementById("card-"+cardid).style.display = 'none';
     document.getElementById("back-card-"+cardid).style.display = 'flex';
-    document.getElementById("back-card-"+cardid).style.minHeight = '400px';
+    document.getElementById("back-card-"+cardid).style.minHeight = '300px';
 
     
 }
@@ -91,15 +91,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-function adjustBackCardHeight() {
+/*function adjustBackCardHeight() {
     var skillsListDivs = document.querySelectorAll('.skills-list div:not(.back-card)');
     var backCards = document.querySelectorAll('.back-card');
     
     if (skillsListDivs.length && backCards.length) {
         skillsListDivs.forEach(function(skillsListDiv, index) {
-            if (backCards[index]) {
+            if (backCards[index] && !backCards[index].dataset.adjusted) {
                 backCards[index].style.width = skillsListDiv.offsetWidth + 'px';
                 backCards[index].style.height = skillsListDiv.offsetHeight + 'px';
+                backCards[index].dataset.adjusted = true; // Marque la carte comme ajustée
             }
         });
     }
@@ -109,13 +110,14 @@ function adjustBackCardHeight() {
     
     if (softSkillsListDivs.length && softBackCards.length) {
         softSkillsListDivs.forEach(function(softSkillsListDiv, index) {
-            if (softBackCards[index]) {
+            if (softBackCards[index] && !softBackCards[index].dataset.adjusted) {
                 softBackCards[index].style.width = softSkillsListDiv.offsetWidth + 'px';
                 softBackCards[index].style.height = softSkillsListDiv.offsetHeight + 'px';
+                softBackCards[index].dataset.adjusted = true; // Marque la carte comme ajustée
             }
         });
     }
-}
+}*/
 
 // Fonction de debounce pour limiter le nombre d'appels à adjustBackCardHeight
 function debounce(func, wait) {
@@ -166,9 +168,4 @@ document.addEventListener('DOMContentLoaded', function() {
             adjustBackCardHeight();
         });
     });
-
-    // Recalculer les dimensions des back-cards à chaque interaction avec l'écran
-    window.addEventListener('scroll', adjustBackCardHeight);
-    window.addEventListener('touchmove', adjustBackCardHeight);
-    window.addEventListener('touchend', adjustBackCardHeight);
 });
