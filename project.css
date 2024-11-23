@@ -292,7 +292,10 @@ footer p {
     }
 
     .project-technos {
-        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        flex-wrap: wrap;
     }
 
     .year h2, .technos h2 {
