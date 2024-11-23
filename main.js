@@ -87,38 +87,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-
-
-
-/*function adjustBackCardHeight() {
-    var skillsListDivs = document.querySelectorAll('.skills-list div:not(.back-card)');
-    var backCards = document.querySelectorAll('.back-card');
-    
-    if (skillsListDivs.length && backCards.length) {
-        skillsListDivs.forEach(function(skillsListDiv, index) {
-            if (backCards[index] && !backCards[index].dataset.adjusted) {
-                backCards[index].style.width = skillsListDiv.offsetWidth + 'px';
-                backCards[index].style.height = skillsListDiv.offsetHeight + 'px';
-                backCards[index].dataset.adjusted = true; // Marque la carte comme ajustée
-            }
-        });
-    }
-
-    var softSkillsListDivs = document.querySelectorAll('.container-soft-skills .skills-list div:not(.back-card)');
-    var softBackCards = document.querySelectorAll('.container-soft-skills .back-card');
-    
-    if (softSkillsListDivs.length && softBackCards.length) {
-        softSkillsListDivs.forEach(function(softSkillsListDiv, index) {
-            if (softBackCards[index] && !softBackCards[index].dataset.adjusted) {
-                softBackCards[index].style.width = softSkillsListDiv.offsetWidth + 'px';
-                softBackCards[index].style.height = softSkillsListDiv.offsetHeight + 'px';
-                softBackCards[index].dataset.adjusted = true; // Marque la carte comme ajustée
-            }
-        });
-    }
-}*/
-
 // Fonction de debounce pour limiter le nombre d'appels à adjustBackCardHeight
 function debounce(func, wait) {
     let timeout;
