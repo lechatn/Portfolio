@@ -615,6 +615,8 @@ body {
 
 .contact-list li{
     margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
     display: block;
 }
 
@@ -623,6 +625,7 @@ body {
     color: #96d1d1;
     font-size: 20px;
     font-weight: 600;
+    margin-right: 5px;
     transition: all .40s ease;
 }
 
@@ -723,6 +726,7 @@ footer p {
     position: fixed;
     bottom: 5rem;
     right: 2.1rem;
+    z-index: 1000;
 }
 
 .top i{
@@ -817,3 +821,66 @@ footer p {
 }
 
 
+
+
+@media (max-width: 1350px) {
+    .latest-project h2{
+        font-size: 40px;
+    }    
+}
+
+
+@media (max-width: 1180px) {
+    body {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #081b29;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-text h2{
+        font-size: 80px;
+    }
+
+    .top{
+        display: none;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-text{
+        text-align: center;
+    }
+}

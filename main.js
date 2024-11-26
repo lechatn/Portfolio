@@ -108,12 +108,6 @@ function disableAnimations() {
     document.head.appendChild(style);
 }
 
-// Appeler la fonction pour ajuster la hauteur des back-cards
-document.addEventListener('DOMContentLoaded', adjustBackCardHeight);
-
-// Ajuster la hauteur des back-cards lors du redimensionnement de la fenêtre avec debounce
-window.addEventListener('resize', debounce(adjustBackCardHeight, 100));
-
 document.addEventListener('DOMContentLoaded', function() {
     const burgerMenu = document.getElementById('burger-menu');
     const navbar = document.querySelector('.navbar');
@@ -129,11 +123,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Ajouter des écouteurs d'événements pour les boutons "Voir plus"
-    const viewMoreButtons = document.querySelectorAll('.read');
-    viewMoreButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            adjustBackCardHeight();
-        });
-    });
 });
