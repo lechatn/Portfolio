@@ -309,7 +309,7 @@ body {
 }
 
 .skills-list div:not(.back-card) p {
-    margin-bottom: 50px;
+    margin-bottom: 5px;
     font-size: 15px;
 }
 
@@ -324,10 +324,7 @@ body {
     text-decoration: none;
     color: #081b29;
     font-size: 12px;
-    margin-top: 10px;
 }
-
-
 
 .read{
     display: inline-block;
