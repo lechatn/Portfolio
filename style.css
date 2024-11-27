@@ -933,4 +933,8 @@ footer p {
         min-height: 450px; /* Ajuste cette valeur */
         max-height: 450px; /* Ajuste cette valeur */
     }
+
+    .about-text p{
+        padding-right: 0;
+    }
 }
