@@ -288,6 +288,8 @@ body {
 
 .skills-list div{
     position: relative;
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
     height: 100%;
     min-height: 400px; /* Ajuste cette valeur */
     max-height: 400px; /* Ajuste cette valeur */
@@ -318,12 +320,11 @@ body {
 }
 
 .skills-list div a {
-    position: absolute;
     bottom: 20px; /* Ajustez cette valeur selon vos besoins */
     text-decoration: none;
     color: #081b29;
     font-size: 12px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 
@@ -836,6 +837,7 @@ footer p {
         margin-left: 1rem;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .navbar {
@@ -870,6 +872,11 @@ footer p {
         flex-direction: column;
     }
 
+    .home-content{
+        margin-top: 100px;
+        text-align: center;
+    }
+
     .contact-text h2{
         font-size: 80px;
     }
@@ -887,5 +894,9 @@ footer p {
 
     .about-text{
         text-align: center;
+    }
+
+    .contact-text h2{
+        font-size: 60px;
     }
 }
