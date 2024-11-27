@@ -865,6 +865,11 @@ footer p {
         flex-direction: column;
     }
 
+    .home{
+        display: flex;
+        flex-direction: column;
+    }
+
     .contact-text h2{
         font-size: 80px;
     }
