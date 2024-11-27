@@ -885,9 +885,6 @@ footer p {
         text-align: center;
     }
 
-    .back-card-logos p{
-        font-size: 20px;
-    }
 
     .container-hard-skills h1{
         font-size: 50px;
@@ -932,9 +929,32 @@ footer p {
     .skills-list div{
         min-height: 450px; /* Ajuste cette valeur */
         max-height: 450px; /* Ajuste cette valeur */
+        animation: pulse 1s ease-in-out infinite;
+    }
+
+    .back-card {
+        min-height: 450px !important;
+        max-height: 450px !important;
     }
 
     .about-text p{
         padding-right: 0;
+    }
+
+    #back-card-5, #back-card-4, #card-5, #card-4 {
+        min-height: 350px !important;
+        max-height: 350px !important;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
     }
 }
