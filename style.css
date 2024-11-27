@@ -929,7 +929,6 @@ footer p {
     .skills-list div{
         min-height: 450px; /* Ajuste cette valeur */
         max-height: 450px; /* Ajuste cette valeur */
-        animation: pulse 1s ease-in-out infinite;
     }
 
     .back-card {
@@ -939,6 +938,10 @@ footer p {
 
     .about-text p{
         padding-right: 0;
+    }
+
+    .row{
+        animation: pulse 1s ease-in-out infinite;
     }
 
     #back-card-5, #back-card-4, #card-5, #card-4 {
