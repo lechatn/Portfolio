@@ -109,8 +109,8 @@ body {
 }
 
 .latest-project img {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     animation: slideLeft 1s ease forwards;
 }
 
@@ -159,6 +159,10 @@ body {
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
+}
+
+.home-content h1 span {
+    color: #96D1D1;
 }
 
 .home-content p {
@@ -309,7 +313,7 @@ body {
 }
 
 .skills-list div:not(.back-card) p {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 15px;
 }
 
@@ -834,7 +838,14 @@ footer p {
         margin-left: 1rem;
         justify-content: center;
         align-items: center;
-        text-align: center;
+    }
+
+    h1{
+        font-size: 70px;
+    }
+
+    h2{ 
+        font-size: 60px
     }
 
     .navbar {
@@ -874,6 +885,27 @@ footer p {
         text-align: center;
     }
 
+    .back-card-logos p{
+        font-size: 20px;
+    }
+
+    .container-hard-skills h1{
+        font-size: 50px;
+    }
+
+    .contact{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-left: 0;
+    }
+
+    .contact-text{
+        text-align: center;
+    }
+
     .contact-text h2{
         font-size: 80px;
     }
@@ -895,5 +927,10 @@ footer p {
 
     .contact-text h2{
         font-size: 60px;
+    }
+
+    .skills-list div{
+        min-height: 450px; /* Ajuste cette valeur */
+        max-height: 450px; /* Ajuste cette valeur */
     }
 }
