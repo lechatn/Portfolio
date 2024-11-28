@@ -944,6 +944,15 @@ footer p {
         animation: pulse 1s ease-in-out infinite;
     }
 
+    #back-card-4, #back-card-5{
+        padding-right: 0 !important;
+    }
+
+    .back-card-logos p{
+        font-size: 20px; /* Adjust the size as needed */
+    }
+
+
     #back-card-5, #back-card-4, #card-5, #card-4 {
         min-height: 350px !important;
         max-height: 350px !important;
