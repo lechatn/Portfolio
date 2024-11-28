@@ -173,7 +173,6 @@ body {
 }  
 
 .github-link {
-    position: absolute;
     right: 16rem; /* Ajustez cette valeur selon la taille de la marge souhaitée */
 }
 
@@ -261,26 +260,29 @@ footer p {
     border-radius: 0.5rem;
 }
 
-/* Media queries pour les écrans plus petits */
-@media (max-width: 1200px) {
+
+@media (max-width: 1050px) {
     body {
-        margin-right: 5rem;
-        margin-left: 5rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    .project-details {
+        padding: 0;
+    }
+
+    .logos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .github-link {
-        right: 5rem; /* Ajustez cette valeur selon la taille de la marge souhaitée */
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        margin-right: 2rem;
-        margin-left: 2rem;
-    }
-
-    .github-link {
-        right: 2rem; /* Ajustez cette valeur selon la taille de la marge souhaitée */
+        margin-top: 2rem;
     }
 
     .project-details-title h1 {
@@ -298,50 +300,7 @@ footer p {
         flex-wrap: wrap;
     }
 
-    .year h2, .technos h2 {
-        font-size: 24px;
-    }
-
-    .year p, .technos i {
-        font-size: 18px;
-    }
-
-    .project-presentation p {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        margin-right: 1rem;
-        margin-left: 1rem;
-    }
-
-    .github-link {
-        right: 1rem; /* Ajustez cette valeur selon la taille de la marge souhaitée */
-    }
-
-    .project-details-title h1 {
-        font-size: 40px;
-    }
-
-    .project-details-title h1 span {
-        font-size: 40px;
-    }
-
-    .project-technos {
-        gap: 10px;
-    }
-
-    .year h2, .technos h2 {
-        font-size: 20px;
-    }
-
-    .year p, .technos i {
-        font-size: 16px;
-    }
-
-    .project-presentation p {
-        font-size: 16px;
+    .top {
+        display: none;
     }
 }
