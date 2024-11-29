@@ -1,3 +1,5 @@
+
+/*Style for all the page*/
 * {
     margin: 0;
     padding: 0;
@@ -15,29 +17,28 @@ body {
     height: 100%;
 }
 
-/* Style de la scrollbar */
+/* Scrollbar style */
 ::-webkit-scrollbar {
-    width: 12px; /* Largeur de la scrollbar */
+    width: 12px; 
 }
 
-/* Style de la piste de la scrollbar */
 ::-webkit-scrollbar-track {
-    background: #081b29; /* Couleur de fond de la piste */
-    border-radius: 10px; /* Bordure arrondie */
+    background: #081b29; 
+    border-radius: 10px; 
 }
 
-/* Style du pouce de la scrollbar */
 ::-webkit-scrollbar-thumb {
-    background: #ededed; /* Couleur du pouce */
-    border-radius: 10px; /* Bordure arrondie */
-    border: 3px solid #081b29; /* Bordure autour du pouce */
+    background: #ededed; 
+    border-radius: 10px;
+    border: 3px solid #081b29;
 }
 
-/* Style du pouce de la scrollbar lors du survol */
 ::-webkit-scrollbar-thumb:hover {
-    background: #fff; /* Couleur du pouce lors du survol */
+    background: #fff; 
 }
 
+
+/* Navbar syle*/
 .header {
     position: fixed;
     top: 0;
@@ -87,6 +88,9 @@ body {
     color: #96D1D1;
 }
 
+
+/* Home style */
+
 .home {
     position: relative;
     width: 100%;
@@ -94,10 +98,10 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 20px; /* Remove horizontal padding */
+    padding: 20px; 
     z-index: 1;
     margin-bottom: 40px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    box-sizing: border-box;
 }
 
 .latest-project {
@@ -127,10 +131,22 @@ body {
     color: #96D1D1;
 }
 
-
 .home-content {
     flex: 1;
     margin-right: 20px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h1 span {
+    color: #96D1D1;
 }
 
 .home-content h3 {
@@ -149,19 +165,6 @@ body {
 }
 
 .home-content h3 span {
-    color: #96D1D1;
-}
-
-.home-content h1 {
-    font-size: 56px;
-    font-weight: 700;
-    margin: -3px 0;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1s;
-}
-
-.home-content h1 span {
     color: #96D1D1;
 }
 
@@ -197,6 +200,9 @@ body {
     box-shadow: 0 0 20px #96D1D1;
 }
 
+
+/* About style */
+
 .about {
     margin-top: 200px;
     margin-bottom: 200px;
@@ -207,7 +213,6 @@ body {
     position: relative;
     z-index: 0;
 }
-
 
 .about-img {
     position: relative;
@@ -267,11 +272,12 @@ body {
     box-shadow: 0 0 20px #96D1D1;
 }
 
+
+/* Skills style */
+
 .skills {
     z-index: 0;
 }
-
-
 
 .sub-title {
     text-align: center;
@@ -292,11 +298,11 @@ body {
 
 .skills-list div{
     position: relative;
-    overflow-y: auto; /* Add vertical scrollbar if content overflows */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto; 
+    overflow-x: hidden; 
     height: 100%;
-    min-height: 400px; /* Ajuste cette valeur */
-    max-height: 400px; /* Ajuste cette valeur */
+    min-height: 400px;
+    max-height: 400px;
     background-color: transparent;
     padding: 30px;
     font-size: 13px;
@@ -308,13 +314,8 @@ body {
                 1px 1px 40px #0053b8f7;
 }
 
-.skills-list div i {
-    font-size: 50px;
-}
-
-.skills-list div:not(.back-card) p {
-    margin-bottom: 20px;
-    font-size: 15px;
+.skills-list div:hover{
+    transform: translateY(-10px);
 }
 
 .skills-list div h2 {
@@ -323,11 +324,20 @@ body {
     margin-bottom: 15px;
 }
 
+.skills-list div:not(.back-card) p {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
 .skills-list div a {
     bottom: 20px; /* Ajustez cette valeur selon vos besoins */
     text-decoration: none;
     color: #081b29;
     font-size: 12px;
+}
+
+.skills-list div i {
+    font-size: 50px;
 }
 
 .read{
@@ -348,11 +358,6 @@ body {
     box-shadow: 0 0 20px #96D1D1;
 }
 
-.skills-list div:hover{
-    transform: translateY(-10px);
-}
-
-
 #skills{
     color: aliceblue;
     font-size: 20px;
@@ -360,62 +365,45 @@ body {
     margin-bottom: 4rem;
 }
 
-
-@keyframes scroll-horizontal {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-}
-
-
-
 .back-card{
     display: none;
-    overflow-y: auto; /* Add vertical scrollbar if content overflows */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto; 
+    overflow-x: hidden; 
     width: inherit;
     height: inherit;
-    min-height: 400px; /* Ajuste cette valeur */
-    max-height: 400px; /* Ajuste cette valeur */
+    min-height: 400px; 
+    max-height: 400px;
 }
 
-#back-card-5, #back-card-4, #card-5, #card-4 {
-    min-height: 300px !important;
-    max-height: 300px !important;
-}
+
 .back-card-arrow {
-    position: sticky; /* Make the arrow section sticky */
-    top: 0; /* Stick to the top */
-    z-index: 1; /* Ensure it stays above the logos */
-    background-color: inherit; /* Maintain background color */
-    padding: 10px 0; /* Optional: Add some padding */
+    position: sticky; 
+    top: 0; 
+    z-index: 1;
+    background-color: inherit; 
+    padding: 10px 0;
 }
 
-/* Custom scrollbar styles */
 .back-card::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    width: 12px; 
 }
 
 .back-card::-webkit-scrollbar-track {
-    background: none; /* Background of the scrollbar track */
-    border-radius: 10px; /* Rounded corners for the track */
+    background: none;
+    border-radius: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
 .back-card::-webkit-scrollbar-thumb {
-    background: #96d1d1; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners for the thumb */
-    border: 2px solid #2c2c2c; /* Padding around the thumb */
+    background: #96d1d1; 
+    border-radius: 10px; 
+    border: 2px solid #2c2c2c;
 }
 
 .back-card::-webkit-scrollbar-thumb:hover {
-    background: #81bcbc; /* Color of the scrollbar thumb on hover */
+    background: #81bcbc;
 }
-
 
 .back-card-logos {
     display: flex;
@@ -424,25 +412,6 @@ body {
     font-size: 25px;
     margin-left: 10px; 
     margin-top: 11px;
-}
-
-.back-card-logos i {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 16px;
-}
-
-
-#hard-skills{
-    margin-top: 2rem;
-}
-
-.python-icon {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background: url('../Portfolio/images/python-logo.png') no-repeat center center;
-    background-size: contain;
 }
 
 .back-card-logos p{
@@ -455,10 +424,27 @@ body {
     margin-left: 15px;
 }
 
+.back-card-logos i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16px;
+}
+
+#back-card-5, #back-card-4, #card-5, #card-4 {
+    min-height: 300px !important;
+    max-height: 300px !important;
+}
+
+#hard-skills{
+    margin-top: 2rem;
+}
+
 .container-soft-skills{
     margin-top: 5rem;
 }
 
+
+/* Projects style */
 
 .main-text{
     padding-top: 130px;
@@ -497,6 +483,18 @@ body {
     transition: transform 0.5s;
 }
 
+.row:hover .layer {
+    height: 100%; /* Expand to full height */
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(150, 209, 209, 0.9)); /* Darker background on hover */
+}
+
+.row:hover .layer h5, .row:hover .layer p {
+    opacity: 1; /* Show text on hover */
+}
+
+.row:hover img {
+    transform: scale(1.1);
+}
 
 .layer {
     width: 100%;
@@ -535,15 +533,6 @@ body {
     line-height: 1.8;
 }
 
-.row:hover .layer {
-    height: 100%; /* Expand to full height */
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(150, 209, 209, 0.9)); /* Darker background on hover */
-}
-
-.row:hover .layer h5, .row:hover .layer p {
-    opacity: 1; /* Show text on hover */
-}
-
 .layer i {
     color: #96d1d1;
     margin-top: 20px;
@@ -571,11 +560,7 @@ body {
     text-decoration: none;
 }
 
-.row:hover img {
-    transform: scale(1.1);
-}
-
-
+/* Contact style */
 
 .contact{
     display: grid;
@@ -706,6 +691,9 @@ body {
     box-shadow: 0 0 20px #96D1D1;
 }
 
+
+/* Footer style */
+
 footer {
     margin: 0;
     background: transparent; 
@@ -724,6 +712,9 @@ footer p {
     font-weight: 300;
 }
 
+
+/* Top style */
+
 .top{
     position: fixed;
     bottom: 5rem;
@@ -739,6 +730,8 @@ footer p {
     border-radius: 0.5rem;
 }
 
+
+/* Alert style */
 
 #alert-container {
     position: fixed;
@@ -772,7 +765,7 @@ footer p {
 }
 
 
-
+/* Animation style */
 
 @keyframes slideRight {
     0% {
@@ -822,8 +815,29 @@ footer p {
     }
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scroll-horizontal {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
 
 
+/* Media queries */
 
 @media (max-width: 1350px) {
     .latest-project h2{
@@ -870,11 +884,6 @@ footer p {
         display: block;
     }
 
-    .contact{
-        display: flex;
-        flex-direction: column;
-    }
-
     .home{
         display: flex;
         flex-direction: column;
@@ -883,32 +892,6 @@ footer p {
     .home-content{
         margin-top: 100px;
         text-align: center;
-    }
-
-
-    .container-hard-skills h1{
-        font-size: 50px;
-    }
-
-    .contact{
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        padding-left: 0;
-    }
-
-    .contact-text{
-        text-align: center;
-    }
-
-    .contact-text h2{
-        font-size: 80px;
-    }
-
-    .top{
-        display: none;
     }
 
     .about{
@@ -922,8 +905,13 @@ footer p {
         text-align: center;
     }
 
-    .contact-text h2{
-        font-size: 60px;
+    .about-text p{
+        padding-right: 0;
+    }
+
+
+    .container-hard-skills h1{
+        font-size: 50px;
     }
 
     .skills-list div{
@@ -934,14 +922,6 @@ footer p {
     .back-card {
         min-height: 450px !important;
         max-height: 450px !important;
-    }
-
-    .about-text p{
-        padding-right: 0;
-    }
-
-    .row{
-        animation: pulse 1s ease-in-out infinite;
     }
 
     #back-card-4, #back-card-5{
@@ -957,16 +937,31 @@ footer p {
         min-height: 350px !important;
         max-height: 350px !important;
     }
-}
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
+    .row{
+        animation: pulse 1s ease-in-out infinite;
     }
-    50% {
-        transform: scale(1.02);
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-left: 0;
     }
-    100% {
-        transform: scale(1);
+
+    .contact-text{
+        text-align: center;
+    }
+
+    .contact-text h2{
+            font-size: 60px;
+    }
+
+    .top{
+        display: none;
     }
 }
