@@ -894,6 +894,10 @@ footer p {
         text-align: center;
     }
 
+    #layer-latest-project h5{
+        font-size: 20px;
+    }
+
     .about{
         display: flex;
         flex-direction: column;
