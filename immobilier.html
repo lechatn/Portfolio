@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NL | Projet Immobilier</title>
+    <link rel="stylesheet" href="project.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./images/logoNL.png" type="image/png">
+</head>
+<body>
+    <section class="project-details" id="project-details">
+        <div class="project-exit">
+            <a class="go-back" href="main.html">
+                <img src="./images/arrow.svg" alt="fleche gauche">
+                <p>Retour aux projets</p>
+            </a> 
+        </div>
+        <div class="project-details-title">
+            <h1><span>PROJET</span> IMMOBILIER</h1>
+            <h4>Analyse et prédiction des prix de l’immobilier</h4>
+        </div>
+        <div class="project-technos">
+            <div class="year">
+                <h2>Date</h2>
+                <p>Mars 2025 - Avril 2025</p>
+            </div>
+            <div class="technos">
+                <h2>Technologies utilisées</h2>
+                <div class="logos">
+                    <i class='bx bxl-python' style='color:aliceblue' data-lang="PYTHON"></i>
+                </div>
+            </div>
+            <div class="github-link">
+                <a href="https://github.com/benphihe/immobilier.git">Lien Github</a>
+            </div>
+        </div>
+        <img src="./images/immobilier.png" class="home-photo" alt="Immobilier">
+    </section>
+    <section class="project-presentation">
+        <div class="project-target">
+            <h2><span>OBJECTIFS</span> DU PROJET</h2>
+            <p>Ce projet a pour objectif de prédire les prix de vente des maisons dans le comté de King (USA) à l’aide d’une base de données réelle. L’enjeu principal était de créer un modèle de machine learning capable d’estimer le prix d’un bien en fonction de ses caractéristiques (surface, nombre de chambres, localisation, etc.).
+                <br><br>Le projet comprend également le développement d’une API pour rendre les prédictions accessibles via une interface simple et réutilisable ainsi que la création de graphs pertinents pour nous aider durant le projet.
+            </p>
+        </div>
+        
+        <div class="roleinproject">
+            <h2>MON <span>RÔLE</span> DANS LE PROJET</h2>
+            <p>J’ai été impliqué sur l'ensemble des parties du projet, de l’exploration des données à la mise en place de l’API. J’ai commencé par nettoyer et analyser les données avec Python (pandas), puis j’ai conçu un modèle de régression avec scikit-learn pour prédire les prix. 
+                <br><br>Ensuite, j’ai déployé une API avec FastAPI et Uvicorn afin de permettre à d’autres utilisateurs de tester le modèle facilement en ligne.
+            </p>
+        </div>
+        
+        <div class="learninproject">
+            <h2>CE QUE J'AI <span>APPRIS</span></h2>
+            <p>Ce projet m’a permis d’approfondir mes compétences en data science, notamment en préparation de données, en modélisation prédictive et en interprétation de résultats. 
+                <br><br>J’ai également appris à concevoir et déployer une API avec FastAPI, à documenter proprement mon travail, et à rendre un projet data exploitable techniquement et compréhensible pour un public non technique.
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Noé LECHAT. Tous droits réservés.</p>
+    </footer>
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+    <script src="projects.js"></script>
+</body>
+</html>
