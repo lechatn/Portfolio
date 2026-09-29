@@ -36,6 +36,7 @@ const nav = [
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#081b29" />
     <link rel="icon" href={`${base}/favicon.png`} type="image/png" />
+    <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
   </head>
   <body>
     <a class="skip-link" href="#main">Aller au contenu</a>
@@ -53,9 +54,8 @@ const nav = [
 
     <footer class="footer">
       <p>&copy; {new Date().getFullYear()} {site.name}. Tous droits réservés.</p>
+      <a href="#" class="top" aria-label="Retour en haut de page"><i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
     </footer>
-
-    <a href="#" class="top" aria-label="Retour en haut de page"><i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
 
     <script>
       const burger = document.getElementById('burger');
@@ -66,6 +66,12 @@ const nav = [
       };
       burger?.addEventListener('click', () => setOpen(!navbar?.classList.contains('open')));
       navbar?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navbar?.classList.contains('open')) {
+          setOpen(false);
+          burger?.focus();
+        }
+      });
 
       // Lien actif selon la section visible (accueil uniquement)
       const links = document.querySelectorAll<HTMLAnchorElement>('.navbar a[data-section]');
@@ -77,7 +83,12 @@ const nav = [
           (entries) => {
             entries.forEach((e) => {
               if (e.isIntersecting) {
-                links.forEach((l) => l.classList.toggle('active', l.dataset.section === e.target.id));
+                links.forEach((l) => {
+                  const on = l.dataset.section === e.target.id;
+                  l.classList.toggle('active', on);
+                  if (on) l.setAttribute('aria-current', 'true');
+                  else l.removeAttribute('aria-current');
+                });
               }
             });
           },
