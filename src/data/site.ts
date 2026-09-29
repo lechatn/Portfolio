@@ -12,7 +12,6 @@ export const site = {
   socials: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/noé-lechat-175b90265', icon: 'bxl-linkedin' },
     { label: 'GitHub', href: 'https://github.com/lechatn', icon: 'bxl-github' },
-    { label: 'Instagram', href: 'https://www.instagram.com/noe_lechat/', icon: 'bxl-instagram' },
   ],
   // TODO : à remplacer par ton propre texte (un élément du tableau = un paragraphe).
   aboutTitle: 'Qui suis-je ?',

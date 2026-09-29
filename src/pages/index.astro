@@ -5,7 +5,7 @@ import ProjectCard from '../components/ProjectCard.astro';
 import TechIcon from '../components/TechIcon.astro';
 import { getImage } from '../components/images';
 import { site } from '../data/site';
-import { skillGroups, softSkills, projectsFor } from '../data/skills';
+import { skillGroups, softSkills } from '../data/skills';
 import projects from '../data/projects.json';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -49,37 +49,35 @@ const latest = projects[0];
     <h2 id="skills-heading" class="section-title">Mes <span>compétences</span></h2>
     <p class="section-lead">Les technologies que j'utilise, et les projets où je les ai mises en pratique.</p>
 
-    {skillGroups.map((group) => (
-      <div class="skill-group reveal">
-        <div class="skill-group-head">
-          <i class={`bx ${group.icon}`} aria-hidden="true"></i>
-          <div>
-            <h3>{group.title}</h3>
-            <p>{group.description}</p>
-          </div>
-        </div>
-        <ul class="skill-grid">
-          {group.skills.map((skill) => {
-            const used = projectsFor(skill.id);
-            return (
-              <li class="skill-tile">
-                <TechIcon id={skill.id} label />
-                {used.length > 0 && (
-                  <span class="skill-proof">
-                    {used.map((p, i) => (
-                      <>
-                        <a href={`${base}/projets/${p.slug}/`}>{p.title}</a>
-                        {i < used.length - 1 && ', '}
-                      </>
-                    ))}
-                  </span>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    ))}
+    <div class="skill-rows">
+      {skillGroups.map((group, gi) => {
+        const groupProjects = projects.filter((p) => group.skills.some((s) => p.tech.includes(s.id)));
+        return (
+          <section class="skill-row reveal" aria-labelledby={`skill-${group.id}`}>
+            <div class="skill-row-head">
+              <span class="skill-num" aria-hidden="true">{String(gi + 1).padStart(2, '0')}</span>
+              <h3 id={`skill-${group.id}`}>{group.title}</h3>
+              <p>{group.description}</p>
+            </div>
+            <div class="skill-row-body">
+              <ul class="pills">
+                {group.skills.map((skill) => (
+                  <li class="pill"><TechIcon id={skill.id} label /></li>
+                ))}
+              </ul>
+              {groupProjects.length > 0 && (
+                <p class="skill-proof">
+                  <span>Mis en pratique dans :</span>
+                  {groupProjects.map((p) => (
+                    <a href={`${base}/projets/${p.slug}/`}>{p.title}</a>
+                  ))}
+                </p>
+              )}
+            </div>
+          </section>
+        );
+      })}
+    </div>
 
     <h3 class="sub-title">Soft <span>skills</span></h3>
     <ul class="soft-grid">
