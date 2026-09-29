@@ -13,6 +13,17 @@
     <!-- FIX Performances : font-display swap pour éviter FOIT -->
     <style>
         @font-face { font-display: swap; }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
     </style>
     <!-- FIX Performances : chargement non-bloquant de Boxicons -->
     <link rel="preload" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -38,7 +49,7 @@
 
     <!-- FIX Accessibilité : ajout du landmark <main> -->
     <main>
-        <section class="home" id="home" aria-labelledby="home-heading">
+        <section class="home" id="home" aria-label="Accueil">
             <div class="home-content">
                 <p>Bonjour, je m'appelle</p>
                 <!-- FIX Accessibilité : un seul h1 par page, hiérarchie correcte -->
@@ -73,7 +84,7 @@
                 <h2 id="about-heading">A propos de <span>moi</span></h2>
                 <h3>Recherche un stage en Data/IA</h3>
                 <p>Je suis un étudiant en deuxième année d'informatique, passionné et curieux, actuellement à la recherche d'un stage et d'une alternance dans les domaines de la data et de l'IA, deux domaines qui me plaisent depuis le début de mon cursus. Enthousiaste à l'idée d'apprendre et de collaborer, je suis prêt à m'investir pleinement pour intégrer une équipe professionnelle et explorer les différentes voies de ma future carrière.</p>
-                <a href="./docs/CV_alternance_Noe_LECHAT.pdf" class="btn" download="CV_alternance_Noe_LECHAT">Télécharger CV</a>
+                <a href="./docs/CV_alternance_Noe_LECHAT.pdf" class="btn" download="CV_alternance_Noe_LECHAT" aria-label="Télécharger le CV de Noé LECHAT (fichier PDF)">Télécharger CV <span class="sr-only">(PDF)</span></a>
             </div>
         </section>
 
@@ -95,14 +106,14 @@
                         <div class="back-card-logos">
                             <span class="techno"><i class='bx bxl-javascript' style='color:#e9d44d' aria-hidden="true"></i><p>JavaScript</p></span>
                             <span class="techno"><i class='bx bxl-html5' style='color:#dd4b24' aria-hidden="true"></i><p>HTML</p></span>
-                            <span class="techno"><i class='bx bxl-css3' style='color:#147bbc' aria-hidden="true"></i><p>CSS</p></span>
+                            <span class="techno"><i class='bx bxl-css3' style='color:#4baee8' aria-hidden="true"></i><p>CSS</p></span>
                             <span class="techno"><i class='bx bxl-go-lang' style='color:#00a9d2' aria-hidden="true"></i><p>Golang</p></span>
                             <span class="techno"><i class='bx bxl-java' style='color:#0a74c2' aria-hidden="true"></i><p>JAVA</p></span>
                             <span class="techno"><i class='bx bxl-angular' style='color:#d6002f' aria-hidden="true"></i><p>Angular</p></span>
                             <span class="techno"><i class='bx bxl-typescript' style='color:#2f74c0' aria-hidden="true"></i><p>TypeScript</p></span>
                             <span class="techno"><i class='bx bxl-docker' style='color:#008de1' aria-hidden="true"></i><p>Docker</p></span>
                             <span class="techno"><i class='bx bxl-react' style='color:#61dbfb' aria-hidden="true"></i><p>React</p></span>
-                            <span class="techno"><i class='bx bxl-php' style='color:#ffff' aria-hidden="true"></i><p>PHP</p></span>
+                            <span class="techno"><i class='bx bxl-php' style='color:#ffffff' aria-hidden="true"></i><p>PHP</p></span>
                             <span class="techno"><i class='bx bxl-c-plus-plus' style='color:#659ad2' aria-hidden="true"></i><p>C# / C++</p></span>
                         </div>
                     </div>
@@ -137,8 +148,8 @@
                             <i class='bx bx-arrow-back' style='color:#96d1d1' onclick="Refresh('3')" aria-label="Retour" role="button" tabindex="0"></i>
                         </div>
                         <div class="back-card-logos">
-                            <span class="techno"><i class='bx bxl-github' style='color:#1f2328' aria-hidden="true"></i><p>Github</p></span>
-                            <span class="techno"><i class='bx bxl-trello' style='color:#1f2328' aria-hidden="true"></i><p>Trello</p></span>
+                            <span class="techno"><i class='bx bxl-github' style='color:#96d1d1' aria-hidden="true"></i><p>Github</p></span>
+                            <span class="techno"><i class='bx bxl-trello' style='color:#96d1d1' aria-hidden="true"></i><p>Trello</p></span>
                         </div>
                     </div>
                 </div>
