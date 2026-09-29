@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import TechIcon from './TechIcon.astro';
+import { getImage } from './images';
+
+interface Props {
+  project: {
+    slug: string;
+    title: string;
+    short: string;
+    image: string;
+    date: string;
+    tech: string[];
+  };
+}
+const { project } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<article class="project-card reveal">
+  <a href={`${base}/projets/${project.slug}/`} class="project-link" aria-label={`Voir le projet ${project.title}`}>
+    <Image
+      src={getImage(project.image)}
+      alt={`Capture du projet ${project.title}`}
+      widths={[400, 800]}
+      sizes="(max-width: 700px) 100vw, 400px"
+      loading="lazy"
+    />
+    <div class="layer">
+      <h3>{project.title}</h3>
+      <p>{project.short}</p>
+      <span class="layer-more">Voir le projet <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></span>
+    </div>
+  </a>
+  <div class="project-meta">
+    <span class="project-date">{project.date}</span>
+    <div class="chips">
+      {project.tech.slice(0, 5).map((t) => <TechIcon id={t} />)}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,108 @@
+---
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import 'boxicons/css/boxicons.min.css';
+import '../styles/global.css';
+import { site } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description = site.description } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | Portfolio`;
+const nav = [
+  { href: `${base}/#home`, id: 'home', label: 'Accueil' },
+  { href: `${base}/#skills`, id: 'skills', label: 'Compétences' },
+  { href: `${base}/#projects`, id: 'projects', label: 'Projets' },
+  { href: `${base}/#about`, id: 'about', label: 'À propos' },
+  { href: `${base}/#contact`, id: 'contact', label: 'Contact' },
+];
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#081b29" />
+    <link rel="icon" href={`${base}/favicon.png`} type="image/png" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <header class="header">
+      <a href={`${base}/#home`} class="logo">Portfolio</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navbar">
+        <i class="bx bx-menu" aria-hidden="true"></i>
+      </button>
+      <nav class="navbar" id="navbar" aria-label="Navigation principale">
+        {nav.map((n, i) => <a href={n.href} data-section={n.id} style={`--i:${i + 1}`}>{n.label}</a>)}
+      </nav>
+    </header>
+
+    <main id="main"><slot /></main>
+
+    <footer class="footer">
+      <p>&copy; {new Date().getFullYear()} {site.name}. Tous droits réservés.</p>
+    </footer>
+
+    <a href="#" class="top" aria-label="Retour en haut de page"><i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
+
+    <script>
+      const burger = document.getElementById('burger');
+      const navbar = document.getElementById('navbar');
+      const setOpen = (open: boolean) => {
+        navbar?.classList.toggle('open', open);
+        burger?.setAttribute('aria-expanded', String(open));
+      };
+      burger?.addEventListener('click', () => setOpen(!navbar?.classList.contains('open')));
+      navbar?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+
+      // Lien actif selon la section visible (accueil uniquement)
+      const links = document.querySelectorAll<HTMLAnchorElement>('.navbar a[data-section]');
+      const sections = Array.from(links)
+        .map((l) => document.getElementById(l.dataset.section!))
+        .filter((s): s is HTMLElement => !!s);
+      if (sections.length) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                links.forEach((l) => l.classList.toggle('active', l.dataset.section === e.target.id));
+              }
+            });
+          },
+          { rootMargin: '-45% 0px -50% 0px' },
+        );
+        sections.forEach((s) => io.observe(s));
+      }
+
+      // Apparition au scroll
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const ro = new IntersectionObserver(
+          (entries) =>
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                ro.unobserve(e.target);
+              }
+            }),
+          { threshold: 0.12 },
+        );
+        reveals.forEach((r) => ro.observe(r));
+      } else {
+        reveals.forEach((r) => r.classList.add('visible'));
+      }
+    </script>
+  </body>
+</html>

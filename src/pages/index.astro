@@ -1,0 +1,172 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import TechIcon from '../components/TechIcon.astro';
+import { getImage } from '../components/images';
+import { site } from '../data/site';
+import { skillGroups, softSkills, projectsFor } from '../data/skills';
+import projects from '../data/projects.json';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const latest = projects[0];
+---
+
+<Base>
+  <section class="home" id="home" aria-label="Accueil">
+    <div class="home-content">
+      <p class="anim-right">Bonjour, je m'appelle</p>
+      <h1 class="anim-right"><span>{site.firstName}</span> {site.lastName}</h1>
+      <p class="tagline anim-left">{site.tagline}</p>
+      <div class="home-actions anim-left">
+        <a class="btn" href="#skills">Mes compétences</a>
+        <a class="btn btn-ghost" href="#projects">Mes projets</a>
+      </div>
+      <div class="home-sci">
+        {site.socials.map((s, i) => (
+          <a href={s.href} style={`--i:${i + 6}`} aria-label={`${s.label} de ${site.name}`} target="_blank" rel="noopener noreferrer">
+            <i class={`bx ${s.icon}`} aria-hidden="true"></i>
+          </a>
+        ))}
+      </div>
+    </div>
+    <div class="latest-project">
+      <h2>Dernier <span>projet</span></h2>
+      <article class="project-card">
+        <a href={`${base}/projets/${latest.slug}/`} class="project-link" aria-label={`Voir le projet ${latest.title}`}>
+          <Image src={getImage(latest.image)} alt={`Capture du projet ${latest.title}`} widths={[444, 888]} sizes="(max-width: 900px) 100vw, 444px" loading="eager" />
+          <div class="layer">
+            <h3>{latest.title}</h3>
+            <p>{latest.short}</p>
+            <span class="layer-more">Voir le projet <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></span>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="skills" id="skills" aria-labelledby="skills-heading">
+    <h2 id="skills-heading" class="section-title">Mes <span>compétences</span></h2>
+    <p class="section-lead">Les technologies que j'utilise, et les projets où je les ai mises en pratique.</p>
+
+    {skillGroups.map((group) => (
+      <div class="skill-group reveal">
+        <div class="skill-group-head">
+          <i class={`bx ${group.icon}`} aria-hidden="true"></i>
+          <div>
+            <h3>{group.title}</h3>
+            <p>{group.description}</p>
+          </div>
+        </div>
+        <ul class="skill-grid">
+          {group.skills.map((skill) => {
+            const used = projectsFor(skill.id);
+            return (
+              <li class="skill-tile">
+                <TechIcon id={skill.id} label />
+                {used.length > 0 && (
+                  <span class="skill-proof">
+                    {used.map((p, i) => (
+                      <>
+                        <a href={`${base}/projets/${p.slug}/`}>{p.title}</a>
+                        {i < used.length - 1 && ', '}
+                      </>
+                    ))}
+                  </span>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    ))}
+
+    <h3 class="sub-title">Soft <span>skills</span></h3>
+    <ul class="soft-grid">
+      {softSkills.map((s) => (
+        <li class="soft-card reveal">
+          <i class={`bx ${s.icon}`} aria-hidden="true"></i>
+          <h4>{s.name}</h4>
+          <p>{s.text}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="projects" id="projects" aria-labelledby="projects-heading">
+    <h2 id="projects-heading" class="section-title">Mes <span>projets</span></h2>
+    <div class="project-grid">
+      {projects.map((p) => <ProjectCard project={p} />)}
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-heading">
+    <div class="about-img reveal">
+      <Image src={getImage('20241105_130556.jpg')} alt={`Photo de ${site.name}`} widths={[350, 700]} sizes="350px" loading="lazy" />
+    </div>
+    <div class="about-text reveal">
+      <h2 id="about-heading">A propos de <span>moi</span></h2>
+      <h3>{site.aboutTitle}</h3>
+      {site.about.map((p) => <p>{p}</p>)}
+      <a href={`${base}/${site.cv}`} class="btn" download aria-label={`Télécharger le CV de ${site.name} (PDF)`}>
+        <i class="bx bx-download" aria-hidden="true"></i> Télécharger mon CV
+      </a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="contact-text reveal">
+      <h2 id="contact-heading">Contactez-<span>moi</span></h2>
+      <p>Une question, une opportunité, un projet ? Écrivez-moi via mes réseaux ou avec ce formulaire.</p>
+      <p class="small">Les informations recueillies via ce formulaire sont utilisées uniquement pour répondre à votre demande. Elles ne sont jamais partagées avec des tiers sans votre consentement. Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression de vos données.</p>
+      <ul class="contact-list">
+        <li><i class="bx bxs-send" aria-hidden="true"></i> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+      </ul>
+      <div class="home-sci">
+        {site.socials.map((s) => (
+          <a href={s.href} aria-label={`${s.label} de ${site.name}`} target="_blank" rel="noopener noreferrer"><i class={`bx ${s.icon}`} aria-hidden="true"></i></a>
+        ))}
+      </div>
+    </div>
+    <form class="contact-form reveal" id="contact-form" action={site.formEndpoint} method="POST">
+      <label for="name">Nom et prénom</label>
+      <input type="text" id="name" name="name" placeholder="Nom et prénom" required autocomplete="name" />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email" />
+      <label for="object">Objet</label>
+      <input type="text" id="object" name="object" placeholder="Objet" />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="8" placeholder="Message" required></textarea>
+      <button type="submit" class="btn send">Envoyer</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    const status = document.getElementById('form-status');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const set = (msg: string, ok: boolean) => {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = ok ? 'ok' : 'error';
+      };
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          set('Merci pour votre message !', true);
+          form.reset();
+        } else {
+          set("Une erreur est survenue, merci de réessayer.", false);
+        }
+      } catch {
+        set("Une erreur est survenue, merci de réessayer.", false);
+      }
+    });
+  </script>
+</Base>

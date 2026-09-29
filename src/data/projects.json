@@ -1,0 +1,193 @@
+[
+  {
+    "slug": "immobilier",
+    "image": "immobilier.png",
+    "short": "Modèle de machine learning de prédiction des prix immobiliers, exposé via une API.",
+    "tech": [
+      "python",
+      "pandas",
+      "scikit-learn",
+      "fastapi"
+    ],
+    "category": "data",
+    "title": "Prédiction prix immobilier",
+    "name": [
+      "PROJET",
+      "IMMOBILIER"
+    ],
+    "subtitle": "Analyse et prédiction des prix de l’immobilier",
+    "date": "Mars 2025 - Avril 2025",
+    "github": "https://github.com/benphihe/immobilier.git",
+    "objectives": [
+      "Ce projet a pour objectif de prédire les prix de vente des maisons dans le comté de King (USA) à l’aide d’une base de données réelle. L’enjeu principal était de créer un modèle de machine learning capable d’estimer le prix d’un bien en fonction de ses caractéristiques (surface, nombre de chambres, localisation, etc.).",
+      "Le projet comprend également le développement d’une API pour rendre les prédictions accessibles via une interface simple et réutilisable ainsi que la création de graphs pertinents pour nous aider durant le projet."
+    ],
+    "role": [
+      "J’ai été impliqué sur l'ensemble des parties du projet, de l’exploration des données à la mise en place de l’API. J’ai commencé par nettoyer et analyser les données avec Python (pandas), puis j’ai conçu un modèle de régression avec scikit-learn pour prédire les prix.",
+      "Ensuite, j’ai déployé une API avec FastAPI et Uvicorn afin de permettre à d’autres utilisateurs de tester le modèle facilement en ligne."
+    ],
+    "learnings": [
+      "Ce projet m’a permis d’approfondir mes compétences en data science, notamment en préparation de données, en modélisation prédictive et en interprétation de résultats.",
+      "J’ai également appris à concevoir et déployer une API avec FastAPI, à documenter proprement mon travail, et à rendre un projet data exploitable techniquement et compréhensible pour un public non technique."
+    ]
+  },
+  {
+    "slug": "matchmaking",
+    "image": "matchmaking.png",
+    "short": "Serveur de matchmaking en temps réel pour un jeu de morpion.",
+    "tech": [
+      "react",
+      "python",
+      "postgresql",
+      "websockets"
+    ],
+    "category": "web",
+    "title": "Matchmaking",
+    "name": [
+      "PROJET",
+      "MATCHMAKING"
+    ],
+    "subtitle": "Matchmaking pour jeu de morpion",
+    "date": "Mars - Avril 2025",
+    "github": "https://github.com/lechatn/projectMatchmaking.git",
+    "objectives": [
+      "L'objectif de ce projet de matchmaking est de permettre aux utilisateurs d’être mis en relation de manière rapide et efficace, sans analyse de profil complexe. Le système repose sur un algorithme simple qui associe les participants en fonction des critères définis par l’application.",
+      "L’expérience utilisateur est fluide et directe : chaque utilisateur peut être jumelé instantanément avec un autre, facilitant les interactions et les rencontres."
+    ],
+    "role": [
+      "J'ai pris en charge l'ensemble du développement d'un projet de matchmaking, de la conception à la mise en ligne. J'ai développé l'algorithme de matchmaking et l'interface permettant aux utilisateurs d'être mis en relation de manière intuitive et efficace.",
+      "J'ai utilisé des technologies telles que PostgreSQL pour la gestion des données et WebSockets pour permettre des interactions en temps réel entre les utilisateurs."
+    ],
+    "learnings": [
+      "Dans ce projet de matchmaking, j'ai appris à concevoir et développer une application complète, en me concentrant sur l'algorithme de matchmaking et l'interface utilisateur. J'ai approfondi mes compétences en développement full-stack, en utilisant des technologies comme PostgreSQL pour la gestion des données et WebSockets pour les interactions en temps réel.",
+      "Ce projet m'a permis de renforcer ma maîtrise de la gestion des bases de données, de l'implémentation d'algorithmes et de l'intégration de solutions de communication en temps réel."
+    ]
+  },
+  {
+    "slug": "tiki-taka-toe",
+    "image": "tiki-taka-toe.jpg",
+    "short": "Site de mini-jeux de football alimenté par une API de données joueurs.",
+    "tech": [
+      "javascript",
+      "html",
+      "css"
+    ],
+    "category": "web",
+    "title": "Tiki-Taka-Toe",
+    "name": [
+      "TIKI",
+      "-TAKA-TOE"
+    ],
+    "subtitle": "Mini-jeux de football en ligne",
+    "date": "Avril 2024 - Mai 2024",
+    "github": "https://github.com/lechatn/tiki-taka-toe",
+    "objectives": [
+      "Dans le cadre d’un projet de fin de module JavaScript, j’ai développé un site de mini-jeux sur le thème du football en collaboration avec plusieurs camarades. Nous pouvions choisir le sujet que nous voulions pour ce projet, nous avons donc décidé de nous orienter vers le football.",
+      "Ce site propose plusieurs expériences ludiques, dont un jeu de type Motus où les joueurs doivent deviner les noms de footballeurs en se basant sur des lettres correctes ou mal placées, à l’image du célèbre jeu de lettres. Un autre mini-jeu consiste à identifier un joueur de football en découvrant des indices progressivement dévoilés, tels que son club actuel, son âge, ou d’autres informations caractéristiques."
+    ],
+    "role": [
+      "Dans ce projet, j’ai joué un rôle clé qui a couvert plusieurs aspects importants du développement. Tout a commencé par la recherche d’une API fiable et riche en données sur les joueurs de football. Après plusieurs essais et comparaisons, j’ai trouvé une API qui répondait aux besoins du projet en offrant des informations telles que les noms, clubs, âges, et autres détails utiles sur les joueurs.",
+      "Une fois cette étape franchie, j’ai travaillé sur l’intégration des données. Cela a impliqué d’écrire les requêtes nécessaires pour extraire les informations pertinentes, adaptées à chaque page du site. Par exemple, pour le jeu Motus, j’ai sélectionné les noms des joueurs, tandis que pour le jeu d’identification progressive, j’ai récupéré des données supplémentaires comme le club ou l’âge des joueurs.",
+      "Une fois les données en place, j’ai pris en charge le développement de la partie back-end des mini-jeux. J’ai implémenté la logique permettant de comparer les réponses des utilisateurs avec les données récupérées, de gérer les indices à dévoiler au fil des tentatives, et d’assurer une interaction fluide entre le front-end et le back-end. J’ai veillé à ce que chaque mini-jeu soit dynamique et réactif, garantissant une expérience utilisateur immersive. Ce rôle m’a permis d’exploiter mes compétences en manipulation d’API, en gestion de données et en développement back-end, tout en contribuant à un projet interactif et ludique."
+    ],
+    "learnings": [
+      "Ce projet m’a permis de consolider plusieurs compétences clés. J’ai appris à intégrer des API et à extraire des données spécifiques pour répondre à des besoins précis, ce qui m’a permis de mieux comprendre la manipulation de données dynamiques. En travaillant sur le back-end, j’ai approfondi ma maîtrise de la logique applicative et de la gestion des interactions entre le front-end et le back-end."
+    ]
+  },
+  {
+    "slug": "forum",
+    "image": "forum.png",
+    "short": "Forum de discussion en ligne avec back-end Go, likes et temps réel.",
+    "tech": [
+      "javascript",
+      "html",
+      "css",
+      "go",
+      "docker",
+      "websockets",
+      "trello"
+    ],
+    "category": "web",
+    "title": "Forum",
+    "name": [
+      "FO",
+      "RUM"
+    ],
+    "subtitle": "Forum en ligne",
+    "date": "Mai 2024 - Juin 2024",
+    "github": "https://github.com/lechatn/forum",
+    "objectives": [
+      "L’objectif de ce projet était de concevoir et de développer un forum en ligne fonctionnel, permettant aux utilisateurs d’échanger sur divers sujets. Ce projet visait à mettre en pratique les connaissances acquises en première année de bachelor en informatique, tout en renforçant des compétences clés en développement web.",
+      "Il fallait donc créer une plateforme interactive où les utilisateurs pouvaient créer un compte personnel pour accéder aux fonctionnalités, publier des messages et répondre aux publications des autres, ou encore interagir avec les contenus via un système de likes et dislikes.",
+      "En réalisant ce projet, l’objectif était également de développer des compétences techniques dans la gestion des bases de données, l’authentification des utilisateurs, et la mise en œuvre d’une interface intuitive pour favoriser l’engagement des utilisateurs."
+    ],
+    "role": [
+      "Dans ce projet, j’ai pris en charge la partie back-end, où j’ai assuré la gestion des publications ainsi que la mise en place du système de likes et dislikes. J’ai également développé des filtres permettant aux utilisateurs de trier les posts par catégories et de naviguer facilement.",
+      "De plus, j’ai créé une page dédiée pour consulter uniquement ses propres posts ou ceux que l’on avait likés. Pour rendre l’expérience encore plus dynamique, j’ai utilisé les WebSockets, une technologie nouvelle pour moi, afin de gérer le système de like. Ce projet m’a offert une excellente opportunité de relever des défis techniques tout en enrichissant mes compétences."
+    ],
+    "learnings": [
+      "Ce projet m’a permis de développer des compétences solides en back-end, notamment dans la gestion des publications et des interactions utilisateur. En découvrant et en utilisant les WebSockets, j’ai appris à intégrer des fonctionnalités de communication en temps réel, un aspect technique nouveau pour moi.",
+      "J’ai également acquis une meilleure maîtrise de la gestion des données, en concevant des filtres avancés pour trier les publications par catégories ou afficher des vues personnalisées, comme les posts propres à un utilisateur ou ceux qu’il a aimés. Ce projet m’a aidé à renforcer ma capacité à résoudre des problématiques complexes et à améliorer l’expérience utilisateur grâce à des solutions dynamiques et efficaces."
+    ]
+  },
+  {
+    "slug": "betterdj",
+    "image": "better_dj.png",
+    "short": "Site vitrine d'une application de playlists collaboratives.",
+    "tech": [
+      "angular",
+      "html",
+      "css"
+    ],
+    "category": "web",
+    "title": "BetterDJ",
+    "name": [
+      "BETTER",
+      " DJ"
+    ],
+    "subtitle": "Site vitrine de l'application BetterDJ",
+    "date": "Octobre 2023 - Mai 2024",
+    "github": "https://github.com/lechatn/BetterDJ",
+    "objectives": [
+      "BetterDJ est une application innovante qui révolutionne la manière de créer des playlists collaboratives. Elle offre aux utilisateurs une expérience musicale partagée et interactive, où chacun peut participer activement à la sélection des morceaux à écouter en temps réel. L’objectif principal de l’application est de rendre la création de playlists plus dynamique et collective.",
+      "Le fonctionnement de l’application est simple et accessible à tous : les utilisateurs se connectent à une session en ligne à l’aide d’un code d’accès unique. Une fois connectés, ils peuvent proposer des titres, voter pour leurs morceaux préférés, et voir immédiatement les chansons ajoutées à la playlist. Cette interaction en temps réel crée une ambiance de partage et de découverte musicale, où chaque participant peut exprimer ses goûts tout en contribuant à l’expérience musicale globale.",
+      "En parallèle de l’application, le chef de projet a souhaité développer un site vitrine pour mieux promouvoir BetterDJ et ses nombreux avantages. Ce site vise à attirer de nouveaux utilisateurs, en mettant en avant la simplicité d’utilisation de l’application, son caractère innovant et son aspect communautaire."
+    ],
+    "role": [
+      "Dans le cadre du projet BetterDJ, mon rôle a consisté principalement à travailler sur la création du site vitrine avec un camarade. Nous avons conçu un site destiné à promouvoir les fonctionnalités et les avantages de l'application. Ce site vitrine présente l'application de manière attrayante, en mettant en avant son concept de playlists collaboratives et l'expérience interactive qu'elle propose aux utilisateurs.",
+      "En complément, j'ai réalisé des maquettes du site, qui ont permis de visualiser l'interface avant le développement final. Mon implication a donc été axée sur le design et la mise en œuvre du site, tout en collaborant avec mon camarade pour assurer une expérience utilisateur fluide et efficace."
+    ],
+    "learnings": [
+      "Pour ce projet, j'ai appris à utiliser Angular, un framework que je ne connaissais pas avant. Grâce à Angular, j'ai pu créer une interface utilisateur réactive et dynamique pour le site vitrine. En travaillant sur cette page unique, j'ai appris à organiser le contenu de manière fluide tout en optimisant l'expérience utilisateur.",
+      "Ce projet m'a permis de mieux comprendre la structure d'une application web avec Angular, ainsi que l'intégration de divers éléments interactifs pour rendre l'interface plus engageante."
+    ]
+  },
+  {
+    "slug": "portfolio-v1",
+    "image": "portfolio.png",
+    "short": "Première version de ce portfolio.",
+    "tech": [
+      "javascript",
+      "html",
+      "css",
+      "trello"
+    ],
+    "category": "web",
+    "title": "Portfolio (v1)",
+    "name": [
+      "PORT",
+      "FOLIO"
+    ],
+    "subtitle": "Mon portfolio",
+    "date": "Octobre 2024 - Décembre 2024",
+    "github": "https://github.com/lechatn/Portfolio",
+    "objectives": [
+      "Dans mon projet de portfolio, j’ai créé un site web simple mais efficace qui présente mes compétences et mes projets réalisés. L'objectif principal était de centraliser toutes mes réalisations et compétences sur une plateforme accessible, afin de renforcer mes candidatures pour la recherche de stage et d’alternance."
+    ],
+    "role": [],
+    "learnings": [
+      "Ce projet de portfolio a été très enrichissant, car il m’a permis de renforcer mes compétences en front-end, un domaine dans lequel je dois encore m’efforcer de progresser. J’ai appris à concevoir des interfaces plus soignées et à améliorer l’expérience utilisateur. De plus, j’ai acquis une nouvelle compétence en créant un formulaire de contact fonctionnel, une partie souvent essentielle pour les sites professionnels.",
+      "Ce projet m’a montré l’importance de la clarté et de la présentation dans la création d’un portfolio, tout en me poussant à améliorer mes capacités en design et en interaction avec les utilisateurs."
+    ]
+  }
+]

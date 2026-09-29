@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import TechIcon from '../../components/TechIcon.astro';
+import { getImage } from '../../components/images';
+import projects from '../../data/projects.json';
+
+export function getStaticPaths() {
+  return projects.map((project, i) => ({
+    params: { slug: project.slug },
+    props: { project, next: projects[(i + 1) % projects.length] },
+  }));
+}
+
+const { project, next } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const sections = [
+  { title: 'Objectifs du projet', paragraphs: project.objectives },
+  { title: 'Mon rôle dans le projet', paragraphs: project.role },
+  { title: "Ce que j'ai appris", paragraphs: project.learnings },
+].filter((s) => s.paragraphs.length);
+---
+
+<Base title={project.title} description={project.short}>
+  <article class="project-page">
+    <a class="back-link" href={`${base}/#projects`}><i class="bx bx-arrow-back" aria-hidden="true"></i> Retour aux projets</a>
+
+    <header class="project-hero">
+      <h1>{project.title}</h1>
+      <p class="project-subtitle">{project.subtitle}</p>
+    </header>
+
+    <div class="project-info">
+      <div>
+        <h2>Date</h2>
+        <p>{project.date}</p>
+      </div>
+      <div>
+        <h2>Technologies</h2>
+        <div class="chips">
+          {project.tech.map((t) => <TechIcon id={t} label />)}
+        </div>
+      </div>
+      <div>
+        <h2>Code source</h2>
+        <a class="btn btn-small" href={project.github} target="_blank" rel="noopener noreferrer"><i class="bx bxl-github" aria-hidden="true"></i> GitHub</a>
+      </div>
+    </div>
+
+    <Image class="project-cover" src={getImage(project.image)} alt={`Capture du projet ${project.title}`} widths={[600, 1000, 1400]} sizes="(max-width: 1100px) 100vw, 1000px" loading="eager" />
+
+    {sections.map((s) => (
+      <section class="project-section reveal">
+        <h2>{s.title}</h2>
+        {s.paragraphs.map((p) => <p>{p}</p>)}
+      </section>
+    ))}
+
+    <nav class="project-next" aria-label="Projet suivant">
+      <a href={`${base}/projets/${next.slug}/`}>Projet suivant : <strong>{next.title}</strong> <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+    </nav>
+  </article>
+</Base>

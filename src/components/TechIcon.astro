@@ -1,0 +1,17 @@
+---
+import { skillById } from '../data/skills';
+
+interface Props {
+  id: string;
+  label?: boolean;
+}
+const { id, label = false } = Astro.props;
+const skill = skillById(id);
+---
+
+{skill && (
+  <span class="tech-chip" title={skill.name}>
+    <i class={`bx ${skill.icon}`} style={`color:${skill.color}`} aria-hidden="true"></i>
+    {label ? <span>{skill.name}</span> : <span class="sr-only">{skill.name}</span>}
+  </span>
+)}
